@@ -19,7 +19,7 @@
 }
 
 :root {
-    --primary: #00FF00;
+    --primary: #00FFFF;
     --primaryTrans: rgba(0, 255, 13, 0.4);
     --accent: #dfc9ad;
     --accentTrans: rgba(232, 195, 195, 0.4);
