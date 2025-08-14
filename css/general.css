@@ -130,7 +130,7 @@ body, html {
 }
 
 .header .left p.name {
-    font-family: monospace;
+    font-family: consolas,"Courier New", monospace;
     font-size: 18px;
     text-shadow: 0px 1px 10px black;
 }
