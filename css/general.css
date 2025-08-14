@@ -19,7 +19,7 @@
 }
 
 :root {
-    --primary: rgb(0, 255, 13);
+    --primary: #00FF00;
     --primaryTrans: rgba(0, 255, 13, 0.4);
     --accent: #dfc9ad;
     --accentTrans: rgba(232, 195, 195, 0.4);
@@ -59,7 +59,7 @@ body, html {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background: linear-gradient(rgb(0, 0, 0), rgb(0, 15, 1));
+    background: linear-gradient(rgb(0, 0, 0), #0A192F);
     background-position: 100%;
     background-size: cover;
     background-clip: border-box;
