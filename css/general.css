@@ -20,7 +20,7 @@
 
 :root {
     --primary: #00FFFF;
-    --primaryTrans: #00FFFF09;
+    --primaryTrans: #00FFFFae;
     --accent: #dfc9ad;
     --accentTrans: rgba(232, 195, 195, 0.4);
     --gradient-color: linear-gradient(var(--primaryTrans), var(--accentTrans));
