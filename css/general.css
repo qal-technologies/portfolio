@@ -59,7 +59,7 @@ body, html {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background: linear-gradient(#000606, #0A192F);
+    background: linear-gradient(#006666, #0A192F);
     background-position: 100%;
     background-size: cover;
     background-clip: border-box;
