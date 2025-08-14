@@ -21,7 +21,7 @@
 :root {
     --primary: #00FFFF;
     --primaryTrans: #00DDDD;
-    --accent: #dfc9ad;
+    --accent: #00eeff;
     --accentTrans: rgba(232, 195, 195, 0.4);
     --gradient-color: linear-gradient(var(--primaryTrans), var(--accentTrans));
     --vert-gradient-color: linear-gradient(90deg, var(--accentTrans), var(--primaryTrans));
@@ -31,7 +31,7 @@
             var(--primary));
     --mainText: #3a3a3a;
     --highlight: #d4af37;
-    --link: #8b5e5a;
+    --link: #009a5a;
     --blue: #0070ba;
     --blueTrans: #41b3ff1c;
     --blur: blur(20px);
@@ -59,7 +59,7 @@ body, html {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background: linear-gradient(#006666, #0A192F);
+    background: linear-gradient(#000606, #0A192F);
     background-position: 100%;
     background-size: cover;
     background-clip: border-box;
