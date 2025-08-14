@@ -44,7 +44,6 @@ header .header-text-div {
     gap: 10%;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    overflow: hidden;
     align-items: center;
     padding-top: 10pc;
     padding-bottom: 6vmin;
@@ -117,8 +116,8 @@ font-family:PoppinsSemi;
 
 .text-lower p.upper-text {
     width: 100%;
-    font-size: 3rem;
-line-height:3.2rem;
+    font-size: 4rem;
+line-height:4.2rem;
     font-weight: bolder;
     margin-bottom:10px;
 font-family:PoppinsBold;
