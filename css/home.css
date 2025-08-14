@@ -97,6 +97,7 @@ filter: hue-rotate(60deg) saturate(5);
     font-weight: bolder;
     font-size: 20px;
     margin-bottom: 1px;
+font-family:PoppinsSemi;
 }
 
 .header-developer-info p.titles {
@@ -120,6 +121,7 @@ filter: hue-rotate(60deg) saturate(5);
     font-size: 2.5rem;
     font-weight: bolder;
     margin-bottom:4px;
+font-family:PoppinsBold;
 }
 
 .text-lower p.under-texts {
