@@ -203,7 +203,7 @@ filter: hue-rotate(60deg) saturate(5);
 .about-me-div a.contact-btn {
     width: 90%;
     background-color: var(--primaryTrans);
-    color: white;
+    color: rgb(0,24,24);
     font-weight: bolder;
     text-align: center;
     font-size: 18px;
