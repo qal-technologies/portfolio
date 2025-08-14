@@ -117,7 +117,13 @@ body, html {
     width: 120%;
     height: 120%;
     object-fit: fill;
+  filter: 
+    brightness(1.5) 
+    sepia(1) 
+    hue-rotate(60deg) 
+    saturate(5);
 }
+
 
 .header .left div.name-div {
     width: max-content;
