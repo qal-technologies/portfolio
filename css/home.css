@@ -151,7 +151,7 @@ border:2px solid var(--primary);
     box-shadow: 0px 0px 12px rgba(0, 208, 208, 0.6);
     scale: 95%;
     color: rgb(0, 24, 24);
-background:var(--primaryTrans);
+background:var(--primary);
 }
 
 .text-lower a:hover span {
@@ -168,6 +168,7 @@ section.about {
     height: 100%;
     max-width: 400px;
     place-self: center;
+filter: hue-rotate(60deg) saturate(5);
 }
 
 .about .about-me-div {
