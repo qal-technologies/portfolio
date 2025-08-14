@@ -4,8 +4,8 @@
 	}
 
 	.header.heightDown {
-		max-height: 200px;
-		box-shadow: 0px 0px 12px rgba(0, 255, 255, 0.2);
+		max-height: 250px;
+		box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.2);
 		padding-bottom: 20px;
 	}
 
