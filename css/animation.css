@@ -20,11 +20,12 @@
 
 /* An animation that makes the element to move upward */
 .moveUp {
-  animation-duration: 500ms;
   animation-name: moveUp;
+  animation-duration: 500ms;
   animation-timing-function: linear;
   animation-delay: 10ms;
   animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 
 @keyframes moveUp {
