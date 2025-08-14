@@ -130,7 +130,7 @@ filter: hue-rotate(60deg) saturate(5);
 .text-lower a {
     width: 100%;
     max-width: 300px;
-    background-color: var(--primaryTrans);
+    background-color: none;
     padding: 10px;
     border-radius: 20px;
     margin-block: 2rem;
@@ -140,6 +140,7 @@ filter: hue-rotate(60deg) saturate(5);
     position: relative;
     cursor: pointer;
     text-align: center;
+border:2px solid var(--primary);
 }
 
 .text-lower a span {
@@ -150,6 +151,7 @@ filter: hue-rotate(60deg) saturate(5);
     box-shadow: 0px 0px 12px rgba(0, 208, 208, 0.6);
     scale: 95%;
     color: rgb(0, 24, 24);
+background:var(--primaryTrans);
 }
 
 .text-lower a:hover span {
