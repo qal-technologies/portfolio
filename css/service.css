@@ -1,0 +1,56 @@
+/* Styles for the services/cart page */
+#cart {
+    flex-direction: column;
+    gap: 20px;
+}
+
+#cart h1 {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#cart-items {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--primaryTrans);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart-item-price {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+#clear-cart-btn {
+    background-color: var(--primary);
+    color: #0A192F;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    align-self: flex-end;
+}
+
+#clear-cart-btn:hover {
+    background-color: var(--accent);
+    transform: scale(1.05);
+}

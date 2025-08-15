@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -75,8 +77,8 @@
 
                     <p class="under-texts">Modern, Responsive and Interactive!</p>
 
-                    <a href="#services" title="Start Building Something" class="get-yours">Start Building
-                        <span>></span></a>
+                    <a href="#services" title="Start Building Something" class="get-yours hide-for-animation">Start Building
+                        <span> ✨</span></a>
                 </div>
 
                 <div class="text-upper moveUp">
@@ -91,7 +93,7 @@
             </div>
         </header>
 
-        <section class="about container">
+        <section class="about container hide-for-animation">
             <img src="/src/images/name-with-logo.png" alt="PasQal Ng image">
 
             <div class="about-me-div">
@@ -110,6 +112,180 @@
 
             </div>
         </section>
+
+        <section class="skills container hidden-for-animation">
+            <h1>SKILL SET</h1>
+            <div class="skill-icons">
+                <i class="devicon-react-original"></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-html5-plain"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-css3-plain"></i>
+                <i class="devicon-nodejs-plain"></i>
+                <i class="devicon-express-original"></i>
+            </div>
+        </section>
+
+        <section id="services" class="services container">
+            <h1 class="hidden-for-animation" >SERVICES</h1>
+            <div class="service-cards">
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-code"></i>
+                        <h2>Standard Web Development</h2>
+                    </div>
+                    <p class="service-description">Get a professional, modern website with a stunning design and smooth user experience. Perfect for personal portfolios, blogs, and small businesses.</p>
+                    <div class="price-container">
+                        <p class="price">Starting at $249.99</p>
+                        <div class="page-slider">
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4" style="accent-clor:var(--primary)" >
+                            <span id="page-count">4</span>
+                        </div>
+                    </div>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Modern Front-end design</li>
+                        <li><i class="fas fa-check-circle"></i> High secure backend</li>
+                        <li><i class="fas fa-check-circle"></i> Well-integrated API</li>
+                        <li><i class="fas fa-check-circle"></i> Best icons</li>
+                        <li><i class="fas fa-check-circle"></i> Smooth user interactions</li>
+                        <li><i class="fas fa-check-circle"></i> Smooth animations</li>
+                    </ul>
+                    <button class="cta-btn">Get your Website</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-code"></i>
+                        <h2>Custom Web Development</h2>
+                    </div>
+                    <p class="service-description">Have a unique idea? I'll build a fully custom website from scratch to meet your specific needs. Includes advanced features, e-commerce functionality, and more.</p>
+ <div class="price-container">
+                        <p class="price">Starting at $349.99</p>
+                        <div class="page-slider">
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4" style="accent-clor:var(--primary)" >
+                            <span id="page-count">4</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Everything in Standard, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Custom features and functionality</li>
+                        <li><i class="fas fa-check-circle"></i> E-commerce integration</li>
+                        <li><i class="fas fa-check-circle"></i> Content Management System (CMS)</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced SEO optimization</li>
+                    </ul>
+                    <button class="cta-btn">Start Building</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Standard App Development</h2>
+                    </div>
+                    <p class="service-description">A high-quality mobile app for iOS and Android, built with React Native. Ideal for startups and businesses looking to expand their reach.</p>
+                    <p class="price">Starting at $99.99</p>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Cross-platform (iOS & Android)</li>
+                        <li><i class="fas fa-check-circle"></i> Built with React Native</li>
+                        <li><i class="fas fa-check-circle"></i> Clean and intuitive UI/UX</li>
+                        <li><i class="fas fa-check-circle"></i> App Store submission assistance</li>
+                    </ul>
+                    <button class="cta-btn">Get Your App</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Custom App Development</h2>
+                    </div>
+                    <p class="service-description">A feature-rich, custom mobile app tailored to your business goals. I use React and React Native to deliver a seamless cross-platform experience.</p>
+                    <p class="price">Starting at $149.99</p>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Everything in Standard, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Custom backend development</li>
+                        <li><i class="fas fa-check-circle"></i> Push notifications</li>
+                        <li><i class="fas fa-check-circle"></i> Third-party API integrations</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="cta-btn">Build a Custom App</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="collaboration" class="collaboration container hidden-for-animation">
+            <h1 class="hidden-for-animation ">COLLABORATION</h1>
+            <p>I'm always open to collaborating on exciting projects. If you have an idea and need a skilled developer, let's talk. I'm proficient in the following technologies:</p>
+            <div class="skill-icons">
+                <i class="devicon-react-original "></i>
+                <i class="devicon-react-original colored"></i>
+                <i class="devicon-html5-plain"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-css3-plain"></i>
+                <i class="devicon-nodejs-plain"></i>
+                <i class="devicon-express-original"></i>
+            </div>
+            <button class="cta-btn scroll-to-contact" data-service="Collaboration">Let's Build Together</button>
+        </section>
+
+        <section id="partnership" class="partnership container hidden-for-animation">
+            <h1>PARTNERSHIP</h1>
+            <p>I offer long-term partnership opportunities for businesses and individuals. A partnership is based on a minimum commitment of two years and requires a clear outline of the project goals and responsibilities. All essential details and information must be provided upfront to ensure a successful and mutually beneficial relationship.</p>
+            <p>Partnership agreements will be legally binding and will cover aspects such as equity, intellectual property, and roles and responsibilities. Let's build something great together.</p>
+            <button class="cta-btn scroll-to-contact hidden-for-animation" data-service="Partnership">Seal the Deal</button>
+        </section>
+
+        <section id="testimonials" class="testimonials container hidden-for-animation">
+            <h1>TESTIMONIALS</h1>
+            <div class="testimonial-carousel">
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/150" alt="Testimonial 1">
+                        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                        <p class="testimonial-author">- John Doe, CEO of ExampleCorp</p>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/150" alt="Testimonial 2">
+                        <p class="testimonial-text">"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                        <p class="testimonial-author">- Jane Smith, Founder of TechCo</p>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/150" alt="Testimonial 3">
+                        <p class="testimonial-text">"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."</p>
+                        <p class="testimonial-author">- Sam Wilson, Marketing Director</p>
+                    </div>
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/150" alt="Testimonial 4">
+                        <p class="testimonial-text">"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p class="testimonial-author">- Emily Brown, Project Manager</p>
+                    </div>
+                </div>
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+        </section>
+
+        <section id="contact" class="contact container hidden-for-animation">
+            <h1>CONTACT ME</h1>
+            <p class="hidden-for-animation" >I'm available for freelance work, collaboration, and partnership opportunities. Feel free to reach out to me through any of the following channels:</p>
+            <div class="contact-links">
+                <a href="https://www.github.com/qal-technologies" id="contact-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto: pascodes.dev@gmail.com?body=Hey, I got your email from your website" id="contact-email"><i class="fas fa-envelope"></i> Email</a>
+                <a href="#" id="contact-facebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/+2349016561308?text=Hey, I got your email from your website" id="contact-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+2349016561308" id="contact-phone"><i class="fas fa-phone"></i> Mobile</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
+
+                <div class="footer-links">
+                    <a href="/html/services.html">Services</a>
+                    <a href="#collaboration">Collaboration</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 

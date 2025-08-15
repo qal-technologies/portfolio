@@ -19,9 +19,9 @@
 }
 
 :root {
-    --primary: rgb(0, 255, 13);
-    --primaryTrans: rgba(0, 255, 13, 0.4);
-    --accent: #dfc9ad;
+    --primary: #00FFFF;
+    --primaryTrans: #00DDDD;
+    --accent: #00eeff;
     --accentTrans: rgba(232, 195, 195, 0.4);
     --gradient-color: linear-gradient(var(--primaryTrans), var(--accentTrans));
     --vert-gradient-color: linear-gradient(90deg, var(--accentTrans), var(--primaryTrans));
@@ -31,7 +31,7 @@
             var(--primary));
     --mainText: #3a3a3a;
     --highlight: #d4af37;
-    --link: #8b5e5a;
+    --link: #009a5a;
     --blue: #0070ba;
     --blueTrans: #41b3ff1c;
     --blur: blur(20px);
@@ -49,7 +49,7 @@
     background: none;
     -webkit-user-select: none;
     user-select: none;
-    font-family: monospace, 'Courier New', Courier, monospace, sans-serif;
+    font-family: PoppinsLight, PoppinsMed, PoppinsSemi, PoppinsBold, sans-serif;
     transition: all ease 600ms;
 }
 
@@ -59,7 +59,7 @@ body, html {
     display: flex;
     flex: 1;
     flex-direction: column;
-    background: linear-gradient(rgb(0, 0, 0), rgb(0, 15, 1));
+    background: linear-gradient(#000606, #0A192F);
     background-position: 100%;
     background-size: cover;
     background-clip: border-box;
@@ -86,7 +86,7 @@ body, html {
     margin-block: 10px;
     border-radius: 30px;
     padding: 10px;
-    border: 1px solid #6aff4c28;
+    border: 1px solid #00ffff28;
     background: rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -117,7 +117,9 @@ body, html {
     width: 120%;
     height: 120%;
     object-fit: fill;
+    filter: hue-rotate(60deg) saturate(5);
 }
+
 
 .header .left div.name-div {
     width: max-content;
@@ -128,7 +130,7 @@ body, html {
 }
 
 .header .left p.name {
-    font-family: monospace;
+    font-family: consolas,"Courier New", monospace;
     font-size: 18px;
     text-shadow: 0px 1px 10px black;
 }

@@ -20,11 +20,12 @@
 
 /* An animation that makes the element to move upward */
 .moveUp {
-  animation-duration: 500ms;
   animation-name: moveUp;
+  animation-duration: 500ms;
   animation-timing-function: linear;
   animation-delay: 10ms;
   animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 
 @keyframes moveUp {
@@ -453,6 +454,25 @@
 
   to {
     height: 55px;
+  }
+}
+
+.fadeInBottom {
+  animation-duration: 500ms;
+  animation-name: fadeInBottom;
+  animation-timing-function: ease-out;
+  animation-delay: 10ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
