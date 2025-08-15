@@ -289,7 +289,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 7, 17, 0.6);
-    padding-top: 5pc;
+    padding-block: 5pc;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     gap: 20px;
