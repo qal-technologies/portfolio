@@ -152,7 +152,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     testimonial.classList.add('active');
                 }
             });
-            const offset = -index * (testimonials[0].offsetWidth - 10);
+            const offset = -index * (testimonials[0].offsetWidth - 20);
             testimonialContainer.style.transform = `translateX(${offset}px)`;
         }
 
