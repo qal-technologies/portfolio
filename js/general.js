@@ -152,13 +152,13 @@ window.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fadeInBottom');
+                entry.target.classList.add('moveUpNfadeIn');
                 entry.target.classList.remove('hidden-for-animation');
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.2
     });
 
     animatedSections.forEach(section => {
