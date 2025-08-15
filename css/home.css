@@ -117,6 +117,7 @@ header .header-text-div .text-upper {
     width: 100%;
     font-size: 2.5rem;
     font-weight: bolder;
+    margin-bottom: 4px;
 }
 
 .text-lower p.under-texts {
@@ -132,6 +133,7 @@ header .header-text-div .text-upper {
     border-radius: 20px;
     margin-block: 2rem;
     color: white;
+    align-items: center;
     font-weight: bolder;
     font-size: 20px;
     position: relative;
