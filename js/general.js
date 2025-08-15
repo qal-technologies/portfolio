@@ -19,14 +19,14 @@ window.addEventListener("DOMContentLoaded", () => {
     if (pagesSlider) {
         const pageCount = document.getElementById('page-count');
         const priceElement = pagesSlider.closest('.service-card').querySelector('.price');
-        const initialPrice = 249.99;
+        const initialPrice = parseInt(priceElement.textContent);
         priceElement.textContent = `Starting at $${initialPrice.toFixed(2)}`;
 
         pagesSlider.addEventListener('input', () => {
             const pages = pagesSlider.value;
             pageCount.textContent = pages;
             const pricePerPage = 19.99;
-            const totalPrice = initialPrice + (pricePerPage * (pages - 1));
+            const totalPrice = initialPrice + (pricePerPage * (pages));
             priceElement.textContent = `Price: $${totalPrice.toFixed(2)}`;
         });
     }
@@ -41,7 +41,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             if (card.querySelector('#pages')) {
                 const pages = card.querySelector('#pages').value;
-                const basePrice = 249.99;
+const normPrice = card.querySelector("p.price");
+                const basePrice = normPrice;
                 const pricePerPage = 19.99;
                 price = basePrice + (pricePerPage * (pages - 1));
                 price = price.toFixed(2);
@@ -127,10 +128,10 @@ window.addEventListener("DOMContentLoaded", () => {
         const message = `I'm interested in your ${selectedService.title} service.`;
 
         if (whatsappLink) {
-            whatsappLink.href = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            whatsappLink.href = `https://wa.me/+2349016561308?text=${encodeURIComponent(message)}`;
         }
         if (emailLink) {
-            emailLink.href = `mailto:?subject=Inquiry about ${selectedService.title}&body=${encodeURIComponent(message)}`;
+            emailLink.href = `mailto: pascodes.dev@gmail.com?subject=Inquiry about ${selectedService.title}&body=${encodeURIComponent(message)}`;
         }
     }
 
@@ -152,7 +153,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('moveUpNfadeIn');
+                entry.target.classList.add('fadeInBottom');
                 entry.target.classList.remove('hidden-for-animation');
                 observer.unobserve(entry.target);
             }
