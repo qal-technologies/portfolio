@@ -77,7 +77,7 @@
 
                     <p class="under-texts">Modern, Responsive and Interactive!</p>
 
-                    <a href="#services" title="Start Building Something" class="get-yours">Start Building
+                    <a href="#services" title="Start Building Something" class="get-yours hide-for-animation">Start Building
                         <span> ✨</span></a>
                 </div>
 
@@ -93,7 +93,7 @@
             </div>
         </header>
 
-        <section class="about container">
+        <section class="about container hide-for-animation">
             <img src="/src/images/name-with-logo.png" alt="PasQal Ng image">
 
             <div class="about-me-div">
@@ -126,10 +126,10 @@
             </div>
         </section>
 
-        <section id="services" class="services container hidden-for-animation">
-            <h1>Services</h1>
+        <section id="services" class="services container">
+            <h1 class="hidden-for-animation" >Services</h1>
             <div class="service-cards">
-                <div class="service-card">
+                <div class="service-card hidden-for-animation">
                     <div class="service-title">
                         <i class="fas fa-code"></i>
                         <h2>Standard Web Development</h2>
@@ -138,9 +138,9 @@
                     <div class="price-container">
                         <p class="price">Starting at $249.99</p>
                         <div class="page-slider">
-                            <label for="pages">Pages (1-10):</label>
-                            <input type="range" id="pages" name="pages" min="1" max="10" value="1">
-                            <span id="page-count">1</span>
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4" style="accent-clor:var(--primary)" >
+                            <span id="page-count">4</span>
                         </div>
                     </div>
                     <ul class="service-perks">
@@ -153,13 +153,21 @@
                     </ul>
                     <button class="cta-btn">Take the Deal</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card hidden-for-animation">
                     <div class="service-title">
                         <i class="fas fa-code"></i>
                         <h2>Custom Web Development</h2>
                     </div>
                     <p class="service-description">Have a unique idea? I'll build a fully custom website from scratch to meet your specific needs. Includes advanced features, e-commerce functionality, and more.</p>
-                    <p class="price">Starting at $349.99</p>
+ <div class="price-container">
+                        <p class="price">Starting at $349.99</p>
+                        <div class="page-slider">
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4" style="accent-clor:var(--primary)" >
+                            <span id="page-count">4</span>
+                        </div>
+                    </div>
+                    
                     <ul class="service-perks">
                         <li><i class="fas fa-check-circle"></i> Everything in Standard, plus:</li>
                         <li><i class="fas fa-check-circle"></i> Custom features and functionality</li>
@@ -169,7 +177,7 @@
                     </ul>
                     <button class="cta-btn">Start Building</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card hidden-for-animation">
                     <div class="service-title">
                         <i class="fas fa-mobile-alt"></i>
                         <h2>Standard App Development</h2>
@@ -184,7 +192,7 @@
                     </ul>
                     <button class="cta-btn">Get Your App</button>
                 </div>
-                <div class="service-card">
+                <div class="service-card hidden-for-animation">
                     <div class="service-title">
                         <i class="fas fa-mobile-alt"></i>
                         <h2>Custom App Development</h2>
@@ -204,10 +212,10 @@
         </section>
 
         <section id="collaboration" class="collaboration container hidden-for-animation">
-            <h1>Collaboration</h1>
+            <h1 class="hidden-for-animation ">Collaboration</h1>
             <p>I'm always open to collaborating on exciting projects. If you have an idea and need a skilled developer, let's talk. I'm proficient in the following technologies:</p>
             <div class="skill-icons">
-                <i class="devicon-react-original"></i>
+                <i class="devicon-react-original "></i>
                 <i class="devicon-react-original colored"></i>
                 <i class="devicon-html5-plain"></i>
                 <i class="devicon-javascript-plain"></i>
@@ -219,10 +227,10 @@
         </section>
 
         <section id="partnership" class="partnership container hidden-for-animation">
-            <h1>Partnership</h1>
+            <h1 >Partnership</h1>
             <p>I offer long-term partnership opportunities for businesses and individuals. A partnership is based on a minimum commitment of two years and requires a clear outline of the project goals and responsibilities. All essential details and information must be provided upfront to ensure a successful and mutually beneficial relationship.</p>
             <p>Partnership agreements will be legally binding and will cover aspects such as equity, intellectual property, and roles and responsibilities. Let's build something great together.</p>
-            <button class="cta-btn scroll-to-contact" data-service="Partnership">Seal the Deal</button>
+            <button class="cta-btn scroll-to-contact hidden-for-animation" data-service="Partnership">Seal the Deal</button>
         </section>
 
         <section id="testimonials" class="testimonials container hidden-for-animation">
@@ -257,7 +265,7 @@
 
         <section id="contact" class="contact container hidden-for-animation">
             <h1>Contact Me</h1>
-            <p>I'm available for freelance work, collaboration, and partnership opportunities. Feel free to reach out to me through any of the following channels:</p>
+            <p class="hidden-for-animation" >I'm available for freelance work, collaboration, and partnership opportunities. Feel free to reach out to me through any of the following channels:</p>
             <div class="contact-links">
                 <a href="#" id="contact-github" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="#" id="contact-email"><i class="fas fa-envelope"></i> Email</a>
@@ -269,11 +277,12 @@
 
         <footer>
             <div class="footer-content">
-                <p>&copy; 2024 PasCodes. All rights reserved.</p>
+                <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
+
                 <div class="footer-links">
-                    <a href="#services">Services</a>
+                    <a href="/html/services.html">Services</a>
                     <a href="#collaboration">Collaboration</a>
-                    <a href="#contact">Contact</a>
+                    <a href="/html/contact.html">Contact</a>
                 </div>
             </div>
         </footer>
