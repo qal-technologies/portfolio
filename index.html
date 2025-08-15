@@ -39,31 +39,25 @@
     <link rel="preload" href="./src/fonts/" as="font" type="font/ttf" crossorigin>
 
 <style>
-     :root {
-            --primary: #3a86ff;
-            --dark: #1a1a2e;
-            --light: #f8f9fa;
-            --gray: #6c757d;
+     
+        .about-text h1 {
+            color: rgba(24,24,24);
+            margin-bottom: 6px;
         }
         
-        .about-me-div h1 {
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-        
-        .about-me-div h2 {
+        .about-text h2 {
             color: var(--primary);
             border-bottom: 2px solid var(--primary);
-            padding-bottom: 5px;
+            padding-bottom: 6px;
             margin-top: 30px;
         }
         
-        .about-me-div .intro {
+        .about-text .intro {
             font-size: 1.1em;
             margin-bottom: 30px;
         }
         
-        .about-me-div .skills-container {
+        .about-text .skills-container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
@@ -76,7 +70,7 @@
         }
         
         .skill-category {
-            background-color: var(--light);
+            background-color: rgba(0, 30,30,0.5);
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
@@ -93,12 +87,6 @@
         
         .skill-list li {
             margin-bottom: 8px;
-        }
-        
-        .highlight {
-            background-color: #fff9c4;
-            padding: 2px 5px;
-            border-radius: 3px;
         }
         
 </style>
