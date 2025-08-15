@@ -484,14 +484,14 @@ section.testimonials {
 
 .testimonial {
     min-width: 300px;
-    width: 90%;
+    width: 100%;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--primaryTrans);
     border-radius: 20px;
-    margin: 0 10px;
+    margin: 0 20px;
     transform: scale(0.8);
     opacity: 0.5;
     transition: all 0.5s ease-in-out;
