@@ -59,8 +59,47 @@
             </ul>
         </nav>
     </div>
-    
+    <div id="body">
+        <section id="cart" class="container">
+            <h1>Your Cart</h1>
+            <div id="cart-items"></div>
+            <button id="clear-cart-btn">Clear Cart</button>
+        </section>
+    </div>
 </body>
 </html>
 
 <script src="/js/general.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const clearCartBtn = document.getElementById('clear-cart-btn');
+
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                return;
+            }
+
+            cart.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <p class="cart-item-title">${item.title}</p>
+                    <p class="cart-item-price">$${item.price}</p>
+                `;
+                cartItemsContainer.appendChild(cartItem);
+            });
+        }
+
+        clearCartBtn.addEventListener('click', () => {
+            localStorage.removeItem('cart');
+            displayCart();
+        });
+
+        displayCart();
+    });
+</script>
