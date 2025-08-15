@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,13 @@
     <meta name="keywords" content="">
     <meta name="description"
         content="Software developer of unseen expertise. CEO of Qal Technologies, a full stack developer (Both Website and Mobile App), UI/UX designer, Graphics designer, Software Planning and a believer of the revolution that technology brings. Are you ready to take a bold step? Do you have ideas but don't know how to implement them? Do you want to solve a problem, but need technical advice and assistance? Well, you're in the right place then. I'm always free for partnership, collaboration and building. Don't hesitate to contact me, Let's build this world together! ">
-    
+
     <meta name="keywords"
         content="software developer, pasqalng, PasQal Ng, PasQalNg, pascodes, pasCodes, web developer, mobile app developer, web development, learn coding, learn programming, API integration, Automation, Nigeria">
-    
+
     <meta name='author' content='PasQal Ng'>
     <meta name='creator' content='PasQal Ng, Qal Technologies, Qal Tech'>
-    
+
     <meta property="og:title" content="PasCodes | Software Developer">
     <meta property="og:description"
         content="Software developer; creating modern, responsive and efficient digital solutions, web, mobile, automation & more.">
@@ -23,83 +24,210 @@
     <!-- needs attention -->
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PasCodes | Software Developer">
     <meta name="twitter:description"
         content="Software developer; creating modern, responsive and efficient digital solutions, web, mobile, automation & more.">
     <meta name="twitter:image" content="/src/images/logo-trans.png">
-    
+
     <link rel="shortcut icon" href="/src/images/logo-trans.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/src/images/logo-trans.png">
     <link rel="preload" href="/src/fonts/" as="font" type="font/ttf" crossorigin>
 
-<link rel="stylesheet" href="/css/animation.css">
-<link rel="stylesheet" href="/css/general.css">
-<link rel="stylesheet" href="/css/services.css">
-<link rel="stylesheet" href="/css/media.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/media.css">
 </head>
 
 <body>
-    <div class="header dropdown">
-        <div class="left">
-            <div class="header-logo leftIntro"><img src="/src/images/logo.png" alt="PasQal Ng Logo"></div>
-            <div class="name-div moveUpNfadeIn">
-                <p class="name">pascodes_</p>
-            </div>
-        </div>
 
-        <div class="menu-tab rightIntro">=</div>
-        <nav class="links moveUp">
-            <ul>
-                <li><a href="/" class="services">HOME</a>
-                </li>
-                <li><a class="services active">SERVICES</a></li>
-                <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
-            </ul>
-        </nav>
+    <div class="upper-wrapper">
+        <div class="header dropdown">
+            <div class="left">
+                <div class="header-logo leftIntro"><img src="/src/images/logo.png" alt="PasQal Ng Logo"></div>
+                <div class="name-div moveUpNfadeIn">
+                    <p class="name">pascodes_</p>
+                </div>
+            </div>
+
+            <div class="menu-tab rightIntro">=</div>
+            <nav class="links moveUp">
+                <ul>
+                    <li><a href="/" class="services">HOME</a>
+                    </li>
+                    <li><a class="services active">SERVICES</a></li>
+                    <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="cart-overlay">
+            <div class="cart-div">
+            <i class="fa-shopping-cart"></i>
+                <span class="cart-count">0</span></div>
+        </div>
     </div>
+
     <div id="body">
-        <section id="cart" class="container">
-            <h1>Your Cart</h1>
-            <div id="cart-items"></div>
-            <button id="clear-cart-btn">Clear Cart</button>
+
+        <section id="services" class="services container" style="margin-top: 10pc;">
+            <h1 class="hidden-for-animation">SERVICES</h1>
+            <div class="service-cards">
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-code"></i>
+                        <h2>Standard Web Development</h2>
+                    </div>
+                    <p class="service-description">Get a professional, modern website with a stunning design and smooth
+                        user experience. Perfect for personal portfolios, blogs, and small businesses.</p>
+                    <div class="price-container">
+                        <p class="price">Starting at $249.99</p>
+                        <div class="page-slider">
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4">
+                            <span id="page-count">4</span>
+                        </div>
+                    </div>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Modern Front-end design</li>
+                        <li><i class="fas fa-check-circle"></i> High secure backend</li>
+                        <li><i class="fas fa-check-circle"></i> Well-integrated API</li>
+                        <li><i class="fas fa-check-circle"></i> Best icons</li>
+                        <li><i class="fas fa-check-circle"></i> Smooth user interactions</li>
+                        <li><i class="fas fa-check-circle"></i> Smooth animations</li>
+                    </ul>
+                    <button class="cta-btn">Get your Website</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-code"></i>
+                        <h2>Custom Web Development</h2>
+                    </div>
+                    <p class="service-description">Have a unique idea? I'll build a fully custom website from scratch to
+                        meet your specific needs. Includes advanced features, e-commerce functionality, and more.</p>
+                    <div class="price-container">
+                        <p class="price">Starting at $349.99</p>
+                        <div class="page-slider">
+                            <label for="pages">Pages (4-10):</label>
+                            <input type="range" id="pages" name="pages" min="4" max="10" value="4">
+                            <span id="page-count">4</span>
+                        </div>
+                    </div>
+
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Everything in Standard, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Custom features and functionality</li>
+                        <li><i class="fas fa-check-circle"></i> E-commerce integration</li>
+                        <li><i class="fas fa-check-circle"></i> Content Management System (CMS)</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced SEO optimization</li>
+                    </ul>
+                    <button class="cta-btn">Start Building</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Standard App Development</h2>
+                    </div>
+                    <p class="service-description">A high-quality mobile app for iOS and Android, built with React
+                        Native. Ideal for startups and businesses looking to expand their reach.</p>
+                    <p class="price">Starting at $99.99</p>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Cross-platform (iOS & Android)</li>
+                        <li><i class="fas fa-check-circle"></i> Built with React Native</li>
+                        <li><i class="fas fa-check-circle"></i> Clean and intuitive UI/UX</li>
+                        <li><i class="fas fa-check-circle"></i> App Store submission assistance</li>
+                    </ul>
+                    <button class="cta-btn">Get Your App</button>
+                </div>
+                <div class="service-card hidden-for-animation">
+                    <div class="service-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h2>Custom App Development</h2>
+                    </div>
+                    <p class="service-description">A feature-rich, custom mobile app tailored to your business goals. I
+                        use React and React Native to deliver a seamless cross-platform experience.</p>
+                    <p class="price">Starting at $149.99</p>
+                    <ul class="service-perks">
+                        <li><i class="fas fa-check-circle"></i> Everything in Standard, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Custom backend development</li>
+                        <li><i class="fas fa-check-circle"></i> Push notifications</li>
+                        <li><i class="fas fa-check-circle"></i> Third-party API integrations</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced analytics</li>
+                    </ul>
+                    <button class="cta-btn">Build a Custom App</button>
+                </div>
+            </div>
         </section>
+
+
+
+        <section id="contact" class="contact container hidden-for-animation">
+            <h1>CONTACT ME</h1>
+            <p class="hidden-for-animation">I'm available for freelance work, collaboration, and partnership
+                opportunities. Feel free to reach out to me through any of the following channels:</p>
+            <div class="contact-links">
+                <a href="https://www.github.com/qal-technologies" id="contact-github" target="_blank"><i
+                        class="fab fa-github"></i> GitHub</a>
+                <a href="mailto: pascodes.dev@gmail.com?body=Hey, I got your email from your website"
+                    id="contact-email"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/paschal-ngaoka id=" contact-linked-in"><i
+                        class="fas fa-linkedin"></i>
+                    LinkedIn</a>
+                <a href="https://www.youtube.com/@pasCodes" id="contact-facebook" target="_blank"><i
+                        class="fab fa-youtube"></i>
+                    Youtube</a>
+                <a href="#" id="contact-facebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/+2349016561308?text=Hey, I got your email from your website"
+                    id="contact-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+2349016561308" id="contact-phone"><i class="fas fa-phone"></i> Mobile</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <img src="/src/images/name-with-logo.png" alt="pascode image">
+
+                <div class="footer-links footer-div">
+                    <h3>PAGES</h3>
+                    <a>Home</a>
+                    <a href="/html/services.html">Services</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+
+                <div class="footer-links footer-div">
+                    <h3>NAVIGATIONS</h3>
+                    <a href="#collaboration">Collaboration</a>
+                    <a href="#partnership">Partnership</a><a href="#services">Get aWebsite</a>
+                    <a href="#skills">My Skillset</a>
+                    <a href="#testimonials">What others think</a>
+                </div>
+
+                <div class="footer-contact-links footer-div">
+                    <h3>CONTACTS</h3>
+                    <a href="https://www.github.com/qal-technologies" id="contact-github" target="_blank"><i
+                            class="fab fa-github"></i>
+                        GitHub</a>
+                    <a href="mailto: pascodes.dev@gmail.com?body=Hey, I got your email from your website"
+                        id="contact-email"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/paschal-ngaoka id=" contact-linked-in"><i
+                            class="fas fa-linkedin"></i>
+                        LinkedIn</a>
+                    <a href="https://www.youtube.com/@pasCodes" id="contact-facebook" target="_blank"><i
+                            class="fab fa-youtube"></i>
+                        Youtube</a>
+                    <a href="#" id="contact-facebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://wa.me/+2349016561308?text=Hey, I got your email from your website"
+                        id="contact-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:+2349016561308" id="contact-phone"><i class="fas fa-phone"></i> Mobile</a>
+                </div>
+            </div>
+            <p>&copy; <span id="year">2025</span> PasCodes | All rights reserved.</p>
+        </footer>
     </div>
 </body>
+
 </html>
 
 <script src="/js/general.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const cartItemsContainer = document.getElementById('cart-items');
-        const clearCartBtn = document.getElementById('clear-cart-btn');
-
-        function displayCart() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            cartItemsContainer.innerHTML = '';
-
-            if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
-                return;
-            }
-
-            cart.forEach(item => {
-                const cartItem = document.createElement('div');
-                cartItem.classList.add('cart-item');
-                cartItem.innerHTML = `
-                    <p class="cart-item-title">${item.title}</p>
-                    <p class="cart-item-price">$${item.price}</p>
-                `;
-                cartItemsContainer.appendChild(cartItem);
-            });
-        }
-
-        clearCartBtn.addEventListener('click', () => {
-            localStorage.removeItem('cart');
-            displayCart();
-        });
-
-        displayCart();
-    });
-</script>
+<script src="/js/service.js"></script>

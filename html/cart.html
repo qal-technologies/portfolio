@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PasCodes | Contact</title>
+    <title>PasCodes | Cart</title>
 
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
@@ -37,9 +37,10 @@
 
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/cart.css">
     <link rel="stylesheet" href="/css/media.css">
 </head>
+
 
 <body>
     <div class="upper-wrapper">
@@ -54,22 +55,28 @@
             <div class="menu-tab rightIntro">=</div>
             <nav class="links moveUp">
                 <ul>
-                    <li><a href="/" class="services">HOME</a>
+                    <li><a href="/" class="home">HOME</a>
                     </li>
-                    <li><a class="services">SERVICES</a></li>
-                    <li><a href="/html/contact.html" class="contact active">CONTACT</a></li>
+                    <li><a href="/html/services.html" class="services">SERVICES</a></li>
+                    <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="cart-overlay">
-            <div class="cart-div">
-                <i class="fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
+    </div>
+
+    <div id="body">
+        <section id="cart" class="container">
+        <div class="upper">
+            <h1>Your Cart</h1>
+            <button id="clear-cart-btn">Clear Cart</button>
         </div>
+
+            <div id="cart-items"></div>
+        </section>
     </div>
 </body>
 
 </html>
 
 <script src="/js/general.js"></script>
+<script src="/js/service.js"></script>

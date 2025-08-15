@@ -11,24 +11,75 @@ function handleMenu() {
     })
 }
 
+function handleCartView() {
+    const cart = JSON.parse(localStorage.getItem('pascodes_cart'));
+    if (!cart) return;
+
+    if (cart && cart.length > 0) {
+        const cartDiv = document.querySelector(".cart-overlay .cart-div").style.display = "flex";
+
+        const span = document.querySelector(".cart-div span.cart-count").textContent = cart.length;
+    }
+}
+
+
 window.addEventListener("DOMContentLoaded", () => {
     handleMenu();
+    handleCartView();
 
     // Price slider logic
-    const pagesSlider = document.getElementById('pages');
-    if (pagesSlider) {
-        const pageCount = document.getElementById('page-count');
-        const priceElement = pagesSlider.closest('.service-card').querySelector('.price');
-        const initialPrice = parseInt(priceElement.textContent);
-        priceElement.textContent = `Starting at $${initialPrice.toFixed(2)}`;
+    const Slider = document.querySelectorAll('input#pages');
+    Slider.forEach(pagesSlider => {
 
-        pagesSlider.addEventListener('input', () => {
-            const pages = pagesSlider.value;
-            pageCount.textContent = pages;
-            const pricePerPage = 19.99;
-            const totalPrice = initialPrice + (pricePerPage * (pages));
-            priceElement.textContent = `Price: $${totalPrice.toFixed(2)}`;
-        });
+        if (pagesSlider) {
+            const pageCount = document.getElementById('page-count');
+            const priceElement = pagesSlider.closest('.service-card').querySelector('.price');
+
+            let initialPrice = priceElement.textContent.replace(/[^0-9.]/g, '');
+            initialPrice = parseFloat(initialPrice);
+
+            priceElement.textContent = `Starting at $${initialPrice.toFixed(2)}`;
+
+            pagesSlider.addEventListener('input', () => {
+                const pages = pagesSlider.value;
+                pageCount.textContent = pages;
+                const pricePerPage = 19.99;
+                const totalPrice = initialPrice + (pricePerPage * (pages));
+                priceElement.textContent = `Price: $${totalPrice.toFixed(2)}`;
+            });
+        }
+    });
+
+    let timer;
+    function handleAlert(message) {
+        clearTimeout(timer);
+
+        const parent = document.querySelector(".alert-message");
+        const previous = document.querySelector("p.alert-text");
+
+        if (parent.classList.contains("fadeOut")) {
+            parent.classList.remove("fadeOut");
+        }
+
+        if (previous) previous.classList.add("fadeOut");
+
+        const div = document.createElement("p");
+        div.classList.add("alert-text", "fadeInBottom");
+        div.innerText = message;
+
+        parent.style.display = "flex";
+        previous && previous.remove();
+        parent.append(div);
+
+        
+        timer = setTimeout(() => {
+            div.classList.add("zoom-out");
+            
+            parent.classList.add("fadeOut");
+
+            parent.style.display = "none";
+        }, 5000);
+
     }
 
     // Cart logic
@@ -41,8 +92,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             if (card.querySelector('#pages')) {
                 const pages = card.querySelector('#pages').value;
-const normPrice = card.querySelector("p.price");
-                const basePrice = normPrice;
+                const normPrice = card.querySelector('.price').textContent.replace(/[^0-9.]/g, '');
+                const basePrice = parseFloat(normPrice);
                 const pricePerPage = 19.99;
                 price = basePrice + (pricePerPage * (pages - 1));
                 price = price.toFixed(2);
@@ -56,14 +107,15 @@ const normPrice = card.querySelector("p.price");
                 price
             };
 
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cart = JSON.parse(localStorage.getItem('pascodes_cart')) || [];
             cart.push(service);
-            localStorage.setItem('cart', JSON.stringify(cart));
+            localStorage.setItem('pascodes_cart', JSON.stringify(cart));
 
             // Save the selected service for the contact form
             localStorage.setItem('selectedService', JSON.stringify(service));
 
-            alert(`${title} has been added to your cart!`);
+            handleAlert(`${title} has been added to your cart!`);
+            handleCartView();
         });
     });
 
@@ -100,7 +152,7 @@ const normPrice = card.querySelector("p.price");
                     testimonial.classList.add('active');
                 }
             });
-            const offset = -index * (testimonials[0].offsetWidth + 20); // +20 for margin
+            const offset = -index * (testimonials[0].offsetWidth);
             testimonialContainer.style.transform = `translateX(${offset}px)`;
         }
 

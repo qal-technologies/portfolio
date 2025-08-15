@@ -29,11 +29,11 @@ header .header-circle {
     max-width: 500px;
     max-height: 500px;
     background: linear-gradient(rgb(0, 50, 60), rgb(0, 80, 80));
-    filter: blur(60px) opacity(0.45);
+    filter: blur(60px) opacity(0.4);
     border-radius: 50%;
-    z-index: -999999;
+    display: flex;
     position: absolute;
-    top: 20%;
+    top: 6%;
     left: -10%;
 }
 
@@ -47,6 +47,7 @@ header .header-text-div {
     align-items: center;
     padding-top: 10pc;
     padding-bottom: 6vmin;
+    z-index: 99;
     justify-content: space-evenly;
 }
 
@@ -68,13 +69,13 @@ header .header-text-div .text-upper {
     height: 100%;
     border-radius: 40px;
     overflow: hidden;
-    
+
 }
 
 .header-text-div .text-upper img {
     width: 120%;
     height: 120%;
-filter: hue-rotate(60deg) saturate(5);
+    filter: hue-rotate(60deg) saturate(5);
 }
 
 .header-text-div .header-developer-info {
@@ -96,7 +97,7 @@ filter: hue-rotate(60deg) saturate(5);
     font-weight: bolder;
     font-size: 20px;
     margin-bottom: 1px;
-font-family:PoppinsSemi;
+    font-family: PoppinsSemi;
 }
 
 .header-developer-info p.titles {
@@ -117,10 +118,10 @@ font-family:PoppinsSemi;
 .text-lower p.upper-text {
     width: 100%;
     font-size: 3.2rem;
-line-height:3.4rem;
+    line-height: 3.4rem;
     font-weight: bolder;
-    margin-bottom:10px;
-font-family:PoppinsBold;
+    margin-bottom: 10px;
+    font-family: PoppinsBold;
 }
 
 .text-lower p.under-texts {
@@ -138,12 +139,12 @@ font-family:PoppinsBold;
     color: white;
     align-items: center;
     font-weight: bolder;
-font-family:monospace;
+    font-family: monospace;
     font-size: 20px;
     position: relative;
     cursor: pointer;
     text-align: center;
-border:2px solid var(--primary);
+    border: 2px solid var(--primary);
 }
 
 .text-lower a span {
@@ -154,7 +155,7 @@ border:2px solid var(--primary);
     box-shadow: 0px 0px 20px rgba(0, 208, 208, 0.6);
     scale: 95%;
     color: rgb(0, 24, 24);
-background:var(--primary);
+    background: var(--primary);
 }
 
 .text-lower a:hover span {
@@ -171,7 +172,7 @@ section.about {
     height: 100%;
     max-width: 400px;
     place-self: center;
-filter: hue-rotate(60deg) saturate(5);
+    filter: hue-rotate(60deg) saturate(5);
 }
 
 .about .about-me-div {
@@ -199,19 +200,28 @@ filter: hue-rotate(60deg) saturate(5);
 .about .about-me-div p {
     font-weight: lighter;
     margin-bottom: 10px;
+    color: #efefef;
     text-align: left;
     padding-inline: 10px;
 }
 
 .about-me-div a.contact-btn {
     width: 90%;
-    background-color: var(--primaryTrans);
-    color: rgb(0,24,24);
+    background-color: var(--primary);
+    color: rgb(0, 24, 24);
     font-weight: bolder;
     text-align: center;
-    font-size: 18px;
+    font-family: PoppinsSemi;
     padding: 8px;
-    border-radius: 40px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+}
+
+.about-me-div a.contact-btn:hover {
+    scale: 0.96;
+    border-color: var(--primary);
+    background: none;
+    color: var(--primary);
 }
 
 section.skills {
@@ -220,9 +230,9 @@ section.skills {
 }
 
 .skills h1 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bolder;
-font-family:PoppinsBold;
+    font-family: PoppinsBold;
 }
 
 .skill-icons {
@@ -233,6 +243,28 @@ font-family:PoppinsBold;
     align-items: center;
 }
 
+.skill-icons div.skill-div {
+    width: max-content;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px rgba(0, 53, 53, 0.4);
+}
+
+.skill-icons div.skill-div:hover {
+    scale: 1.1;
+    box-shadow: 0px 0px 10px rgba(0, 53, 53, 0.6);
+}
+
+.skill-icons .skill-div p {
+    font-weight: bolder;
+    padding-inline: 6px;
+}
+
 .skill-icons i {
     font-size: 5rem;
     color: var(--primary);
@@ -240,25 +272,35 @@ font-family:PoppinsBold;
 }
 
 .skill-icons i:hover {
-    transform: scale(1.1);
     color: var(--accent);
 }
+
+.skills a.many-more {
+    font-weight: bolder;
+    font-size: small;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
 
 section.services {
     flex-direction: column;
     gap: 20px;
 }
 
-.services h1 {
-    font-size: 25px;
+.container h1 {
+    font-size: 30px;
+    letter-spacing: 0.8px;
     font-weight: bolder;
-font-family:PoppinsBold;
+    font-family: PoppinsBold;
 }
 
 .service-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    column-gap: 40px;
     justify-content: center;
 }
 
@@ -267,23 +309,24 @@ font-family:PoppinsBold;
     border: 1px solid var(--primaryTrans);
     border-radius: 20px;
     padding: 20px;
+    width: 100%;
     max-width: 350px;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     transition: all 0.3s ease-in-out;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.1), 10px -2px 15px rgba(255, 187, 0, 0.04), -10px 5px 18px rgba(51, 255, 0, 0.03), 0px -20px 20px rgba(255, 60, 0, 0.03);
 }
 
 .service-title {
     display: flex;
     align-items: center;
     gap: 10px;
-font-family: PoppinsSemi;
 }
 
 .service-title i {
@@ -294,17 +337,24 @@ font-family: PoppinsSemi;
 .service-title h2 {
     font-size: 1.5rem;
     font-weight: bolder;
+    font-family: PoppinsSemi;
 }
 
 .service-description {
     font-size: 1rem;
-    color: #eee;
+    font-family: PoppinsLight;
+    color: #efefef;
 }
 
 .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--accent);
+    color: var(--primary);
+}
+
+.price span.price-text{
+    font-size: 1.25rem;
+    font-weight: bolder;
 }
 
 .price-container {
@@ -325,8 +375,10 @@ font-family: PoppinsSemi;
 }
 
 .page-slider input[type="range"] {
-accent-clor:var(--primary);
-    width: 100%;
+    accent-color: var(--primary);
+    fill: white;
+    cursor: pointer;
+    width: 90%;
 }
 
 #page-count {
@@ -354,24 +406,27 @@ accent-clor:var(--primary);
 }
 
 .cta-btn {
-width:100%;
-max-width:300px;
+    width: 100%;
+    max-width: 300px;
     background-color: var(--primary);
     color: #0A192F;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     padding: 10px 20px;
+    border: 2px solid transparent;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-font-family: PoppinsSemi;
+    font-family: PoppinsSemi;
     transition: all 0.3s ease-in-out;
     text-align: center;
 }
 
 .cta-btn:hover {
-    background-color: var(--accent);
-    transform: scale(1.05);
+    background: none;
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: scale(0.95);
 }
 
 section.collaboration, section.partnership {
@@ -383,13 +438,16 @@ section.collaboration, section.partnership {
 .collaboration h1, .partnership h1 {
     font-size: 25px;
     font-weight: bolder;
-font-family: PoppinsBold;
+    font-family: PoppinsBold;
 }
 
 .collaboration p, .partnership p {
-    max-width: 800px;
+    padding-inline: 10px;
+    max-width: 850px;
     margin: 0 auto;
-    color: #eee;
+    color: #efefef;
+    font-size: 1.2rem;
+    text-align: left;
 }
 
 .collaboration .skill-icons {
@@ -398,13 +456,13 @@ font-family: PoppinsBold;
 
 section.testimonials {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .testimonials h1 {
     font-size: 25px;
     font-weight: bolder;
-font-family: PoppinsBold;
+    font-family: PoppinsBold;
 }
 
 .testimonial-carousel {
@@ -418,10 +476,15 @@ font-family: PoppinsBold;
 .testimonial-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    padding: 6px;
+    padding-inline: 50px;
+    align-items: center;
+    border-radius: 50px;
 }
 
 .testimonial {
-    min-width: 100%;
+    min-width: 300px;
+    width: 90%;
     box-sizing: border-box;
     padding: 20px;
     text-align: center;
@@ -435,8 +498,10 @@ font-family: PoppinsBold;
 }
 
 .testimonial.active {
+    place-self: center;
     transform: scale(1);
     opacity: 1;
+    box-shadow: 0px 1px 10px rgba(0, 255, 255, 0.1), 1px -4px 12px rgb(0, 53, 53, 0.6);
 }
 
 .testimonial img {
@@ -447,14 +512,13 @@ font-family: PoppinsBold;
 }
 
 .testimonial-text {
-    /*font-style: italic;*/
-    color: #eee;
+    color: #efefef;
     margin-bottom: 15px;
 }
 
 .testimonial-author {
     font-weight: bold;
-font-family: PoppinsSemi;
+    font-family: PoppinsSemi;
     color: var(--primary);
 }
 
@@ -462,16 +526,23 @@ font-family: PoppinsSemi;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 255, 255, 0.1);
     border: 1px solid var(--primaryTrans);
     color: var(--primary);
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
-width:50px;
-height:50px;
-backdrop-filter:blur(10px);
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bolder;
+    background: rgba(0, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.prev-btn:hover, .next-btn:hover {
+    scale: 0.98;
 }
 
 .prev-btn {
@@ -483,7 +554,7 @@ backdrop-filter:blur(10px);
 }
 
 section.contact {
-   flex-direction: column;
+    flex-direction: column;
     gap: 20px;
     text-align: center;
 }
@@ -491,13 +562,14 @@ section.contact {
 .contact h1 {
     font-size: 25px;
     font-weight: bolder;
-font-family: PoppinsBold;
+    font-family: PoppinsBold;
 }
 
 .contact p {
     max-width: 800px;
     margin: 0 auto;
-    color: #eee;
+    color: #efefef;
+    font-size: 1.1rem;
 }
 
 .contact-links {
@@ -511,7 +583,7 @@ font-family: PoppinsBold;
 .contact-links a {
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--primaryTrans);
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 10px 20px;
     color: var(--primary);
     text-decoration: none;
@@ -523,38 +595,10 @@ font-family: PoppinsBold;
 
 .contact-links a:hover {
     background-color: var(--primary);
+    box-shadow: 0px 0px 12px var(--accent);
     color: #0A192F;
 }
 
-footer {
-display:flex;
-
-    background-color: #051021;
-    padding: 10pc;
-padding-inline:20px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-links a {
-    color: var(--primary);
-    text-decoration: none;
-    margin-left: 20px;
-    transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover {
-    color: var(--accent);
-}
-
-.hidden-for-animation {
-    opacity: 0;
+.contact-links a:hover i {
+    color: #0A192F;
 }
