@@ -354,6 +354,7 @@ accent-clor:var(--primary);
 
 .cta-btn {
 width:100%;
+max-width:300px;
     background-color: var(--primary);
     color: #0A192F;
     border: none;
