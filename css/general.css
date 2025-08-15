@@ -334,6 +334,9 @@ footer img {
 }
 
 .footer-div a {
+display:flex;
+gap:10px;
+align-items:center;
     font-size: 18px;
     margin-block: 3px;
     color: var(--accent);
