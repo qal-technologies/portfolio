@@ -52,7 +52,7 @@
     font-family: PoppinsLight, PoppinsMed, PoppinsSemi, PoppinsBold, sans-serif;
     transition: all ease 600ms;
     scroll-behavior: smooth;
--webkit-tap-highlight-color:none;
+-webkit-tap-highlight-color: transparent;
 }
 
 body, html {
