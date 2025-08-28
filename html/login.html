@@ -33,6 +33,7 @@
 
     <link rel="shortcut icon" href="/src/images/logo-trans.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/src/images/logo-trans.png">
+
     <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="/src/fonts/" as="font" type="font/ttf" crossorigin>
 
@@ -62,7 +63,9 @@
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
                     <li><a href="/html/courses.html" class="courses">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
+ 
                     <li id="auth-links-container"></li>
+
                     <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
@@ -76,7 +79,8 @@
     </div>
 
     <div id="body">
-        <section id="login" class="auth-container" style="margin-top: 10pc;">
+ 
+        <section id="login" class="auth-container container" style="margin-top: 10pc;">
             <div class="auth-form-container">
                 <h1>Login to Your Account</h1>
                 <form id="login-form">
@@ -92,6 +96,8 @@
                 </form>
                 <p class="auth-switch">Don't have an account? <a href="/html/signup.html">Sign Up</a></p>
             </div>
+
+     
         </section>
     </div>
 
@@ -137,7 +143,10 @@
 </html>
 
 <script src="/js/general.js"></script>
+ 
 <script type="module" src="/js/auth.js"></script>
+
+ 
 <script>
     const year = document.querySelector("footer span#year");
     const date = new Date().getFullYear();

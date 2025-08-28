@@ -5,7 +5,9 @@
   "display": "standalone",
   "background_color": "#0A192F",
   "theme_color": "#00FFFF",
-  "description": "PasCodes | Software Developer Portfolio",
+
+  "description": "PasCodes | Best Tech Solutions ",
+
   "icons": [
     {
       "src": "/src/images/logo.png",
