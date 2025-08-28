@@ -11,6 +11,41 @@ function handleMenu() {
     })
 }
 
+function handleThemeSwitch() {
+    const themeSwitchButtons = document.querySelectorAll('.theme-switch-btn');
+    const body = document.body;
+
+    const applyTheme = (theme) => {
+        body.setAttribute('data-theme', theme);
+        themeSwitchButtons.forEach(button => {
+            const icon = button.querySelector('i');
+            if (theme === 'light') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    };
+
+    const savedTheme = localStorage.getItem('pascodes_theme');
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        applyTheme('dark'); // Default to dark theme
+    }
+
+    themeSwitchButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            let currentTheme = body.getAttribute('data-theme');
+            let newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem('pascodes_theme', newTheme);
+        });
+    });
+}
+
 function handleCartView() {
     const cart = JSON.parse(localStorage.getItem('pascodes_cart'));
     if (!cart) return;
@@ -26,6 +61,7 @@ function handleCartView() {
 window.addEventListener("DOMContentLoaded", () => {
     handleMenu();
     handleCartView();
+    handleThemeSwitch();
 
     // Price slider logic
     const Slider = document.querySelectorAll('input#pages');
