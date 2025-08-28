@@ -13,6 +13,14 @@
 		display: flex;
 	}
 
+    .mobile-switch {
+        display: flex;
+    }
+
+    .desktop-switch {
+        display: none;
+    }
+
 	.header nav.links {
 		display: flex;
 		min-width: 100%;

@@ -33,6 +33,7 @@
 
     <link rel="shortcut icon" href="/src/images/logo-trans.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/src/images/logo-trans.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="/src/fonts/" as="font" type="font/ttf" crossorigin>
 
     <link rel="stylesheet" href="/css/animation.css">
@@ -52,12 +53,16 @@
             </div>
     
             <div class="menu-tab rightIntro">=</div>
+            <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button>
             <nav class="links moveUp">
                 <ul>
-                    <li><a href="/" class="services">HOME</a>
-                    </li>
-                    <li><a href="/html/services.html"  class="services">SERVICES</a></li>
-                    <li><a class="contact active">CONTACT</a></li>
+                    <li><a href="/" class="home">HOME</a></li>
+                    <li><a href="/html/services.html" class="services">SERVICES</a></li>
+                    <li><a href="/html/blog.html" class="blog">BLOG</a></li>
+                    <li><a href="/html/courses.html" class="courses">COURSES</a></li>
+                    <li><a href="/html/contact.html" class="contact active">CONTACT</a></li>
+                    <li id="auth-links-container"></li>
+                    <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
         </div>
@@ -68,8 +73,51 @@
             </div>
         </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand footer-div">
+                <img src="/src/images/logo-trans.png" alt="PasCodes Logo" class="footer-logo">
+                <p class="footer-company-name">PasCodes</p>
+            </div>
+            <div class="footer-links footer-div">
+                <h3>PAGES</h3>
+                <a href="/">Home</a>
+                <a href="/html/services.html">Services</a>
+                <a href="/html/blog.html">Blog</a>
+                <a href="/html/courses.html">Courses</a>
+                <a href="/html/contact.html">Contact</a>
+            </div>
+            <div class="footer-links footer-div">
+                <h3>NAVIGATIONS</h3>
+                <a href="/#collaboration">Collaboration</a>
+                <a href="/#partnership">Partnership</a>
+                <a href="/#services">Get a Website</a>
+                <a href="/#skills">My Skillset</a>
+                <a href="/#testimonials">What others think</a>
+            </div>
+            <div class="footer-contact-links footer-div">
+                <h3>CONTACTS</h3>
+                <a href="https://www.github.com/qal-technologies" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:pascodes.dev@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/paschal-ngaoka"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.youtube.com/@pasCodes" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://wa.me/+2349016561308" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+2349016561308"><i class="fas fa-phone"></i> Mobile</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
 
 <script src="/js/general.js"></script>
+<script>
+    const year = document.querySelector("footer span#year");
+    const date = new Date().getFullYear();
+
+    year.innerHTML = date;
+</script>

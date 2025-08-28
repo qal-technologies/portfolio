@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PasCodes | Login</title>
+    <title>PasCodes | Courses</title>
 
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
@@ -33,13 +33,12 @@
 
     <link rel="shortcut icon" href="/src/images/logo-trans.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="/src/images/logo-trans.png">
-
     <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="/src/fonts/" as="font" type="font/ttf" crossorigin>
 
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/courses.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -61,11 +60,9 @@
                     <li><a href="/" class="home">HOME</a></li>
                     <li><a href="/html/services.html" class="services">SERVICES</a></li>
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
-                    <li><a href="/html/courses.html" class="courses">COURSES</a></li>
+                    <li><a href="/html/courses.html" class="courses active">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
- 
                     <li id="auth-links-container"></li>
-
                     <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
@@ -79,25 +76,62 @@
     </div>
 
     <div id="body">
- 
-        <section id="login" class="auth-container container" style="margin-top: 10pc;">
-            <div class="auth-form-container">
-                <h1>Login to Your Account</h1>
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="login-email">Email</label>
-                        <input type="email" id="login-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" required>
-                    </div>
-                    <button type="submit" class="cta-btn">Login</button>
-                </form>
-                <p class="auth-switch">Don't have an account? <a href="/html/signup.html">Sign Up</a></p>
+        <section id="courses" class="container" style="margin-top: 10pc;">
+            <div class="courses-header">
+                <h1>Our Courses</h1>
+                <p>Unlock your potential with our expert-led courses.</p>
+                <div class="enrolled-counter">
+                    <p><strong><i class="fas fa-users"></i> 10,000+</strong> students enrolled!</p>
+                </div>
             </div>
 
-     
+            <div class="course-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="web-dev">Web Development</button>
+                <button class="category-btn" data-category="mobile-dev">Mobile Development</button>
+                <button class="category-btn" data-category="design">UI/UX Design</button>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course Card (Placeholder) -->
+                <div class="course-card" data-category="web-dev">
+                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                    <div class="course-content">
+                        <h2 class="course-title">The Complete Web Developer Bootcamp</h2>
+                        <p class="course-description">Learn to build modern, responsive websites from scratch. Covers HTML, CSS, JavaScript, React, Node.js, and more.</p>
+                        <div class="course-details">
+                            <span class="price">$99.99</span>
+                            <span class="duration"><i class="far fa-clock"></i> 55 hours</span>
+                        </div>
+                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                    </div>
+                </div>
+                <!-- Repeat for other placeholder courses -->
+                <div class="course-card" data-category="mobile-dev">
+                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                    <div class="course-content">
+                        <h2 class="course-title">React Native for Mobile Apps</h2>
+                        <p class="course-description">Build beautiful, cross-platform mobile apps for iOS and Android using React Native.</p>
+                        <div class="course-details">
+                            <span class="price">$79.99</span>
+                            <span class="duration"><i class="far fa-clock"></i> 40 hours</span>
+                        </div>
+                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                    </div>
+                </div>
+                <div class="course-card" data-category="design">
+                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                    <div class="course-content">
+                        <h2 class="course-title">UI/UX Design Fundamentals</h2>
+                        <p class="course-description">Master the principles of UI/UX design to create intuitive and engaging user experiences.</p>
+                        <div class="course-details">
+                            <span class="price">$49.99</span>
+                            <span class="duration"><i class="far fa-clock"></i> 20 hours</span>
+                        </div>
+                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -143,10 +177,7 @@
 </html>
 
 <script src="/js/general.js"></script>
- 
-<script type="module" src="/js/auth.js"></script>
-
- 
+<script type="module" src="/js/courses.js"></script>
 <script>
     const year = document.querySelector("footer span#year");
     const date = new Date().getFullYear();
