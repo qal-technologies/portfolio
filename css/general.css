@@ -173,6 +173,10 @@ body, html {
     scale: 95%;
 }
 
+.mobile-switch {
+    display: none;
+}
+
 .header nav.links {
     display: none;
     align-items: center;
@@ -210,6 +214,26 @@ body, html {
     background: #0009;
     box-shadow: 0px 0px 10px rgba(0, 153, 255, 0.363);
     border: 1px solid;
+}
+
+.theme-switch-btn {
+    border: 1px solid var(--primaryTrans);
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.theme-switch-btn:hover {
+    box-shadow: 0px 0px 10px var(--primaryTrans);
+    scale: 95%;
 }
 
 div.cart-overlay {
@@ -360,4 +384,149 @@ footer span#year {
 
 .hidden-for-animation {
     opacity: 0;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.footer-company-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--primaryTrans);
+}
+
+body[data-theme="light"] {
+    --primary: #0070ba;
+    --primaryTrans: #41b3ff1c;
+    --accent: #009a5a;
+    --accentTrans: rgba(0, 154, 90, 0.4);
+    --mainText: #efefef;
+    --highlight: #d4af37;
+    --link: #009a5a;
+    --blue: #0070ba;
+    --blueTrans: #41b3ff1c;
+
+    background: linear-gradient(to bottom, #ffffff, #e0ffff);
+}
+
+body[data-theme="light"] * {
+    color: #333;
+}
+
+body[data-theme="light"] .header {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #00000028;
+}
+
+body[data-theme="light"] .header .left p.name {
+    text-shadow: none;
+}
+
+body[data-theme="light"] .header .menu-tab {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--primaryTrans);
+}
+
+body[data-theme="light"] .header .links ul li a {
+    color: #333;
+}
+
+body[data-theme="light"] .header .links ul li a.active,
+body[data-theme="light"] .header .links ul li a:hover {
+    background: #0001;
+    color: #000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-color: #0003;
+}
+
+body[data-theme="light"] .theme-switch-btn {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--primaryTrans);
+    color: #333;
+}
+
+body[data-theme="light"] .theme-switch-btn i {
+    color: #333;
+}
+
+body[data-theme="light"] footer {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+body[data-theme="light"] footer .footer-div h3,
+body[data-theme="light"] footer .footer-div a,
+body[data-theme="light"] footer p,
+body[data-theme="light"] footer span#year {
+    color: #333;
+}
+
+body[data-theme="light"] .about-me-div h1 {
+    color: #333;
+}
+
+body[data-theme="light"] .about-me-div .about-text .highlight {
+    color: var(--primary);
+}
+
+body[data-theme="light"] .skills h1,
+body[data-theme="light"] .services h1,
+body[data-theme="light"] .collaboration h1,
+body[data-theme="light"] .partnership h1,
+body[data-theme="light"] .testimonials h1,
+body[data-theme="light"] .contact h1 {
+    color: #333;
+}
+
+body[data-theme="light"] .skill-icons .skill-div p {
+    color: #333;
+}
+
+body[data-theme="light"] .service-card {
+    background: #fff5;
+    border: 1px solid #0002;
+}
+
+body[data-theme="light"] .service-card h2,
+body[data-theme="light"] .service-card p,
+body[data-theme="light"] .service-card label,
+body[data-theme="light"] .service-card span,
+body[data-theme="light"] .service-card ul li {
+    color: #333;
+}
+
+body[data-theme="light"] .cta-btn {
+    background: var(--primary);
+    color: white;
+}
+
+body[data-theme="light"] .many-more {
+    color: var(--primary);
+}
+
+body[data-theme="light"] #contact .contact-links a {
+    color: #333;
+    border-color: #333;
+}
+
+body[data-theme="light"] #contact .contact-links a:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }
