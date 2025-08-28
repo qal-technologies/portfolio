@@ -1,1 +1,194 @@
-/* Styles for the courses page */
+/* Courses Page Styles */
+.courses-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.courses-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.enrolled-counter {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.course-categories {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid var(--primaryTrans);
+    background: transparent;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--primary);
+    color: white !important;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.course-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+    flex-grow: 1;
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: var(--accent);
+}
+
+.buy-btn {
+    align-self: flex-start;
+}
+
+/* Course Details Page Styles */
+.course-details-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.course-title-full {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.course-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.course-details-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.course-image-full {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.course-main-content h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.learning-objectives {
+    list-style: none;
+    padding-left: 0;
+}
+
+.learning-objectives li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.learning-objectives i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.course-sidebar .price {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.course-buy-card, .instructor-card {
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.buy-btn-full {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.course-meta-details {
+    margin-top: 20px;
+}
+
+.course-meta-details p {
+    margin-bottom: 10px;
+}
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.instructor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}

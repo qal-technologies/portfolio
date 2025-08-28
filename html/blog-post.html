@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PasCodes | Login</title>
+    <title>PasCodes | Blog Post</title>
 
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="">
@@ -38,7 +38,7 @@
 
     <link rel="stylesheet" href="/css/animation.css">
     <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/auth.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/media.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -62,7 +62,6 @@
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
                     <li><a href="/html/courses.html" class="courses">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
-                    <li id="auth-links-container"></li>
                     <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
@@ -76,21 +75,26 @@
     </div>
 
     <div id="body">
-        <section id="login" class="auth-container" style="margin-top: 10pc;">
-            <div class="auth-form-container">
-                <h1>Login to Your Account</h1>
-                <form id="login-form">
-                    <div class="form-group">
-                        <label for="login-email">Email</label>
-                        <input type="email" id="login-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" required>
-                    </div>
-                    <button type="submit" class="cta-btn">Login</button>
-                </form>
-                <p class="auth-switch">Don't have an account? <a href="/html/signup.html">Sign Up</a></p>
+        <section id="blog-post" class="container" style="margin-top: 10pc;">
+            <div class="post-header">
+                <h1 class="post-title-full">The Future of JavaScript Frameworks</h1>
+                <div class="post-meta">
+                    <span>By Paschal Ngaoka</span> | <span>August 28, 2025</span>
+                </div>
+            </div>
+            <img src="https://via.placeholder.com/800x400" alt="Blog Post Image" class="post-image-full">
+            <div class="post-content-full">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h2>A Subheading for the Post</h2>
+                <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula.</p>
+                <blockquote>"This is a blockquote. It's a great way to highlight a key point or a quote from an expert."</blockquote>
+                <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
+            </div>
+            <div class="post-tags-full">
+                <span class="tag">New</span>
+                <span class="tag">Tech</span>
+                <span class="tag">JS</span>
             </div>
         </section>
     </div>
@@ -137,7 +141,7 @@
 </html>
 
 <script src="/js/general.js"></script>
-<script type="module" src="/js/auth.js"></script>
+<script type="module" src="/js/blog-post.js"></script>
 <script>
     const year = document.querySelector("footer span#year");
     const date = new Date().getFullYear();

@@ -1,1 +1,53 @@
-/* Styles for the login and signup pages */
+/* Auth Page Styles */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.auth-form-container h1 {
+    margin-bottom: 30px;
+}
+
+.auth-form-container .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.auth-form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-form-container input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid var(--primaryTrans);
+    background: transparent;
+}
+
+.auth-form-container .cta-btn {
+    width: 100%;
+    padding: 12px;
+}
+
+.auth-switch {
+    margin-top: 20px;
+}
+
+.auth-switch a {
+    color: var(--primary);
+    text-decoration: underline;
+}
