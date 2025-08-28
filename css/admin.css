@@ -1,0 +1,64 @@
+/* Admin Page Styles */
+.admin-section {
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.admin-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#blog-post-form .form-group {
+    margin-bottom: 15px;
+}
+
+#blog-post-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#blog-post-form input,
+#blog-post-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primaryTrans);
+    background: transparent;
+}
+
+#posts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#posts-table th,
+#posts-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--primaryTrans);
+}
+
+#posts-table th {
+    font-size: 1.2rem;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: white !important;
+}
+
+.edit-btn {
+    background: var(--primary);
+}
+
+.delete-btn {
+    background: #dc3545;
+}
