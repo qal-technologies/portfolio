@@ -36,6 +36,7 @@
 
     <link rel="shortcut icon" href="./src/images/logo-trans.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="./src/images/logo-trans.png">
+    <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="./src/fonts/" as="font" type="font/ttf" crossorigin>
 
 <style>
@@ -126,6 +127,7 @@ list-style:circle;
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
                     <li><a href="/html/courses.html" class="courses">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
+                    <li id="auth-links-container"></li>
                     <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
@@ -361,6 +363,14 @@ list-style:circle;
                     </ul>
                     <button class="cta-btn">Build a Custom App</button>
                 </div>
+            </div>
+        </section>
+
+        <section id="course-cta" class="course-cta container hidden-for-animation">
+            <div class="cta-content">
+                <h2>Unlock Your Potential</h2>
+                <p>Join thousands of students and professionals who have transformed their careers with our courses. High-quality, practical, and affordable learning.</p>
+                <a href="/html/courses.html" class="cta-btn">Browse Courses</a>
             </div>
         </section>
 
