@@ -5,68 +5,68 @@ const postsGrid = document.querySelector('.blog-posts-grid');
 const searchInput = document.getElementById('blog-search');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
-const displayPosts = (posts) => {
-    postsGrid.innerHTML = '';
-    if (posts.length === 0) {
-        postsGrid.innerHTML = '<p>No posts found.</p>';
-        return;
-    }
-    posts.forEach(post => {
-        const postCard = document.createElement('div');
-        postCard.className = 'blog-post-card';
-        postCard.dataset.category = post.category;
+// const displayPosts = (posts) => {
+//     postsGrid.innerHTML = '';
+//     if (posts.length === 0) {
+//         postsGrid.innerHTML = '<p>No posts found.</p>';
+//         return;
+//     }
+//     posts.forEach(post => {
+//         const postCard = document.createElement('div');
+//         postCard.className = 'blog-post-card';
+//         postCard.dataset.category = post.category;
 
-        const tagsHtml = post.tags ? post.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
+//         const tagsHtml = post.tags ? post.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : '';
 
-        postCard.innerHTML = `
-            <img src="${post.imageUrl || 'https://via.placeholder.com/400x250'}" alt="Blog Post Image">
-            <div class="post-content">
-                <h2 class="post-title">${post.title || 'Untitled Post'}</h2>
-                <p class="post-description">${post.description || 'No description available.'}</p>
-                <div class="post-tags">${tagsHtml}</div>
-                <a href="/html/blog-post.html?id=${post.id}" class="read-more-btn">Read More</a>
-            </div>
-        `;
-        postsGrid.appendChild(postCard);
-    });
-};
+//         postCard.innerHTML = `
+//             <img src="${post.imageUrl || 'https://via.placeholder.com/400x250'}" alt="Blog Post Image">
+//             <div class="post-content">
+//                 <h2 class="post-title">${post.title || 'Untitled Post'}</h2>
+//                 <p class="post-description">${post.description || 'No description available.'}</p>
+//                 <div class="post-tags">${tagsHtml}</div>
+//                 <a href="/html/blog-post.html?id=${post.id}" class="read-more-btn">Read More</a>
+//             </div>
+//         `;
+//         postsGrid.appendChild(postCard);
+//     });
+// };
 
-const fetchAndDisplayPosts = async (category = 'all', searchTerm = '') => {
-    try {
-        const postsRef = collection(db, 'posts');
-        let postsQuery;
+// const fetchAndDisplayPosts = async (category = 'all', searchTerm = '') => {
+//     try {
+//         const postsRef = collection(db, 'posts');
+//         let postsQuery;
 
-        if (category !== 'all') {
-            // Firestore doesn't support array-contains-any for categories in this way.
-            // A common workaround is to have a 'categories' array field.
-            // For simplicity here, I'll assume a single category string field.
-            // The query will be more complex for multiple categories.
-            postsQuery = query(postsRef, where('category', '==', category));
-        } else {
-            postsQuery = query(postsRef);
-        }
+//         if (category !== 'all') {
+//             // Firestore doesn't support array-contains-any for categories in this way.
+//             // A common workaround is to have a 'categories' array field.
+//             // For simplicity here, I'll assume a single category string field.
+//             // The query will be more complex for multiple categories.
+//             postsQuery = query(postsRef, where('category', '==', category));
+//         } else {
+//             postsQuery = query(postsRef);
+//         }
 
-        const querySnapshot = await getDocs(postsQuery);
-        let posts = [];
-        querySnapshot.forEach((doc) => {
-            posts.push({ id: doc.id, ...doc.data() });
-        });
+//         const querySnapshot = await getDocs(postsQuery);
+//         let posts = [];
+//         querySnapshot.forEach((doc) => {
+//             posts.push({ id: doc.id, ...doc.data() });
+//         });
 
-        if (searchTerm) {
-            searchTerm = searchTerm.toLowerCase();
-            posts = posts.filter(post =>
-                post.title.toLowerCase().includes(searchTerm) ||
-                post.category.toLowerCase().includes(searchTerm) ||
-                (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
-            );
-        }
+//         if (searchTerm) {
+//             searchTerm = searchTerm.toLowerCase();
+//             posts = posts.filter(post =>
+//                 post.title.toLowerCase().includes(searchTerm) ||
+//                 post.category.toLowerCase().includes(searchTerm) ||
+//                 (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+//             );
+//         }
 
-        displayPosts(posts);
-    } catch (error) {
-        console.error("Error fetching posts: ", error);
-        postsGrid.innerHTML = '<p>Error loading posts. Make sure your Firebase project is set up correctly and you have a "posts" collection with sample data.</p>';
-    }
-};
+//         displayPosts(posts);
+//     } catch (error) {
+//         console.error("Error fetching posts: ", error);
+//         postsGrid.innerHTML = '<p>Error loading posts. Make sure your Firebase project is set up correctly and you have a "posts" collection with sample data.</p>';
+//     }
+// };
 
 if(filterBtns) {
     filterBtns.forEach(btn => {
@@ -89,7 +89,7 @@ if(searchInput) {
 }
 
 
-// Initial fetch on page load
-if(window.location.pathname.endsWith('blog.html')) {
-    fetchAndDisplayPosts();
-}
+// // Initial fetch on page load
+// if(window.location.pathname.endsWith('blog.html')) {
+//     fetchAndDisplayPosts();
+// }

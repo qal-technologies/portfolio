@@ -51,7 +51,11 @@ function handleCartView() {
     if (!cart) return;
 
     if (cart && cart.length > 0) {
-        const cartDiv = document.querySelector(".cart-overlay .cart-div").style.display = "flex";
+        const cartDiv = document.querySelector(".cart-overlay .cart-div")
+
+        if (!cartDiv) return;
+
+        cartDiv.style.display = "flex";
 
         const span = document.querySelector(".cart-div span.cart-count").textContent = cart.length;
     }

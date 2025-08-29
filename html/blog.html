@@ -44,6 +44,10 @@
 </head>
 
 <body>
+
+<div class="alert-message">
+</div>
+
     <div class="upper-wrapper">
         <div class="header dropdown">
             <div class="left">
@@ -52,31 +56,42 @@
                     <p class="name">pascodes_</p>
                 </div>
             </div>
-
-            <div class="menu-tab rightIntro">=</div>
-            <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button>
+    
+            <div class="sides">
+                <div class="menu-tab rightIntro">=</div>
+    
+                <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i
+                        class="fas fa-moon"></i></button>
+    
+                <button aria-label="User profile" class="user-profile" id="user-profile"><i
+                        class="fas fa-user"></i></button>
+    
+            </div>
+    
+    
             <nav class="links moveUp">
                 <ul>
                     <li><a href="/" class="home">HOME</a></li>
                     <li><a href="/html/services.html" class="services">SERVICES</a></li>
-                    <li><a href="/html/blog.html" class="blog active">BLOG</a></li>
+                    <li><a class="blog active">BLOG</a></li>
                     <li><a href="/html/courses.html" class="courses">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
                     <li id="auth-links-container"></li>
-                    <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
         </div>
-        <div class="cart-overlay">
-            <a class="cart-div" href="/html/cart.html">
-                <i class="far fa-shopping-bag"></i>
-                <span class="cart-count">0</span>
-            </a>
+    
+        <div class="user-option-overlay">
+            <div class="rightIntro user-options">
+                <a href="/html/user.html" class="user-page">Profile</a>
+    
+                <a href="/html/signup.html" class="sign-action">Login</a>
+            </div>
         </div>
     </div>
 
     <div id="body">
-        <section id="blog" class="container" style="margin-top: 10pc;">
+        <section id="blog" class="container top-container">
             <div class="blog-header">
                 <h1>From the Blog</h1>
                 <p>Latest news, tips, and insights from the world of tech.</p>
@@ -84,8 +99,8 @@
 
             <div class="blog-search-and-filter">
                 <div class="search-container">
-                    <input type="text" id="blog-search" placeholder="Search by title or category...">
-                    <button><i class="fas fa-search"></i></button>
+                    <input type="search" id="blog-search" placeholder="Search by title or category...">
+                    <button title="search button"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="filter-container">
                     <button class="filter-btn active" data-category="all">All</button>
@@ -98,8 +113,7 @@
                 </div>
             </div>
 
-            <div class="blog-posts-grid">
-                <!-- Blog Post Card (Placeholder) -->
+            <div class="blog-posts-grid container">
                 <div class="blog-post-card" data-category="tech js">
                     <img src="https://via.placeholder.com/400x250" alt="Blog Post Image">
                     <div class="post-content">
@@ -127,7 +141,7 @@
                     </div>
                 </div>
                 <div class="blog-post-card" data-category="css">
-                    <img src="https://via.placeholder.com/400x250" alt="Blog Post Image">
+                    <img src="/src/images/logo.png" alt="Blog Post Image">
                     <div class="post-content">
                         <h2 class="post-title">Advanced CSS Techniques for Modern UI</h2>
                         <p class="post-description">Explore advanced CSS techniques like Grid, Flexbox, and custom properties to create stunning user interfaces.</p>
@@ -140,7 +154,6 @@
                 </div>
             </div>
         </section>
-    </div>
 
     <footer>
         <div class="footer-content">
@@ -179,6 +192,7 @@
             <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
         </div>
     </footer>
+    </div>
 </body>
 
 </html>

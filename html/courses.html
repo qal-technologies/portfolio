@@ -44,6 +44,9 @@
 </head>
 
 <body>
+    <div class="alert-message">
+    </div>
+
     <div class="upper-wrapper">
         <div class="header dropdown">
             <div class="left">
@@ -53,30 +56,41 @@
                 </div>
             </div>
 
-            <div class="menu-tab rightIntro">=</div>
-            <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button>
+            <div class="sides">
+                <div class="menu-tab rightIntro">=</div>
+
+                <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i
+                        class="fas fa-moon"></i></button>
+
+                <button aria-label="User profile" class="user-profile" id="user-profile"><i
+                        class="fas fa-user"></i></button>
+
+            </div>
+
+
             <nav class="links moveUp">
                 <ul>
                     <li><a href="/" class="home">HOME</a></li>
                     <li><a href="/html/services.html" class="services">SERVICES</a></li>
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
-                    <li><a href="/html/courses.html" class="courses active">COURSES</a></li>
+                    <li><a class="courses active">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
                     <li id="auth-links-container"></li>
-                    <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
                 </ul>
             </nav>
         </div>
-        <div class="cart-overlay">
-            <a class="cart-div" href="/html/cart.html">
-                <i class="far fa-shopping-bag"></i>
-                <span class="cart-count">0</span>
-            </a>
+
+        <div class="user-option-overlay">
+            <div class="rightIntro user-options">
+                <a href="/html/user.html" class="user-page">Profile</a>
+
+                <a href="/html/signup.html" class="sign-action">Login</a>
+            </div>
         </div>
     </div>
 
     <div id="body">
-        <section id="courses" class="container" style="margin-top: 10pc;">
+        <section id="courses" class="container top-container">
             <div class="courses-header">
                 <h1>Our Courses</h1>
                 <p>Unlock your potential with our expert-led courses.</p>
@@ -84,100 +98,114 @@
                     <p><strong><i class="fas fa-users"></i> 10,000+</strong> students enrolled!</p>
                 </div>
             </div>
+            <div class="course-search-and-filter">
+                <div class="search-container">
+                    <input type="search" id="blog-search" placeholder="Search by title or category...">
+                    <button title="search button"><i class="fas fa-search"></i></button>
 
-            <div class="course-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="web-dev">Web Development</button>
-                <button class="category-btn" data-category="mobile-dev">Mobile Development</button>
-                <button class="category-btn" data-category="design">UI/UX Design</button>
-            </div>
+                    </div>
 
-            <div class="courses-grid">
-                <!-- Course Card (Placeholder) -->
-                <div class="course-card" data-category="web-dev">
-                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
-                    <div class="course-content">
-                        <h2 class="course-title">The Complete Web Developer Bootcamp</h2>
-                        <p class="course-description">Learn to build modern, responsive websites from scratch. Covers HTML, CSS, JavaScript, React, Node.js, and more.</p>
-                        <div class="course-details">
-                            <span class="price">$99.99</span>
-                            <span class="duration"><i class="far fa-clock"></i> 55 hours</span>
-                        </div>
-                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                    <div class="course-categories">
+                        <button class="category-btn active" data-category="all">All</button>
+                        <button class="category-btn" data-category="web-dev">Web Development</button>
+                        <button class="category-btn" data-category="mobile-dev">Mobile Development</button>
+                        <button class="category-btn" data-category="design">UI/UX Design</button>
                     </div>
                 </div>
-                <!-- Repeat for other placeholder courses -->
-                <div class="course-card" data-category="mobile-dev">
-                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
-                    <div class="course-content">
-                        <h2 class="course-title">React Native for Mobile Apps</h2>
-                        <p class="course-description">Build beautiful, cross-platform mobile apps for iOS and Android using React Native.</p>
-                        <div class="course-details">
-                            <span class="price">$79.99</span>
-                            <span class="duration"><i class="far fa-clock"></i> 40 hours</span>
+
+                <div class="courses-grid">
+                    <!-- Course Card (Placeholder) -->
+                    <div class="course-card" data-category="web-dev">
+                        <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                        <div class="course-content">
+                            <h2 class="course-title">The Complete Web Developer Bootcamp</h2>
+                            <p class="course-description">Learn to build modern, responsive websites from scratch.
+                                Covers
+                                HTML, CSS, JavaScript, React, Node.js, and more.</p>
+                            <div class="course-details">
+                                <span class="price">$99.99</span>
+                                <span class="duration"><i class="far fa-clock"></i> 55 hours</span>
+                            </div>
+                            <a href="#" class="cta-btn buy-btn">Buy Now</a>
                         </div>
-                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                    </div>
+                    <!-- Repeat for other placeholder courses -->
+                    <div class="course-card" data-category="mobile-dev">
+                        <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                        <div class="course-content">
+                            <h2 class="course-title">React Native for Mobile Apps</h2>
+                            <p class="course-description">Build beautiful, cross-platform mobile apps for iOS and
+                                Android
+                                using React Native.</p>
+                            <div class="course-details">
+                                <span class="price">$79.99</span>
+                                <span class="duration"><i class="far fa-clock"></i> 40 hours</span>
+                            </div>
+                            <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                        </div>
+                    </div>
+                    <div class="course-card" data-category="design">
+                        <img src="https://via.placeholder.com/400x250" alt="Course Image">
+                        <div class="course-content">
+                            <h2 class="course-title">UI/UX Design Fundamentals</h2>
+                            <p class="course-description">Master the principles of UI/UX design to create intuitive and
+                                engaging user experiences.</p>
+                            <div class="course-details">
+                                <span class="price">$49.99</span>
+                                <span class="duration"><i class="far fa-clock"></i> 20 hours</span>
+                            </div>
+                            <a href="#" class="cta-btn buy-btn">Buy Now</a>
+                        </div>
                     </div>
                 </div>
-                <div class="course-card" data-category="design">
-                    <img src="https://via.placeholder.com/400x250" alt="Course Image">
-                    <div class="course-content">
-                        <h2 class="course-title">UI/UX Design Fundamentals</h2>
-                        <p class="course-description">Master the principles of UI/UX design to create intuitive and engaging user experiences.</p>
-                        <div class="course-details">
-                            <span class="price">$49.99</span>
-                            <span class="duration"><i class="far fa-clock"></i> 20 hours</span>
-                        </div>
-                        <a href="#" class="cta-btn buy-btn">Buy Now</a>
-                    </div>
-                </div>
-            </div>
         </section>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand footer-div">
+                    <img src="/src/images/logo-trans.png" alt="PasCodes Logo" class="footer-logo">
+                    <p class="footer-company-name">PasCodes</p>
+                </div>
+                <div class="footer-links footer-div">
+                    <h3>PAGES</h3>
+                    <a href="/">Home</a>
+                    <a href="/html/services.html">Services</a>
+                    <a href="/html/blog.html">Blog</a>
+                    <a href="/html/courses.html">Courses</a>
+                    <a href="/html/contact.html">Contact</a>
+                </div>
+                <div class="footer-links footer-div">
+                    <h3>NAVIGATIONS</h3>
+                    <a href="/#collaboration">Collaboration</a>
+                    <a href="/#partnership">Partnership</a>
+                    <a href="/#services">Get a Website</a>
+                    <a href="/#skills">My Skillset</a>
+                    <a href="/#testimonials">What others think</a>
+                </div>
+                <div class="footer-contact-links footer-div">
+                    <h3>CONTACTS</h3>
+                    <a href="https://www.github.com/qal-technologies" target="_blank"><i class="fab fa-github"></i>
+                        GitHub</a>
+                    <a href="mailto:pascodes.dev@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/paschal-ngaoka"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.youtube.com/@pasCodes" target="_blank"><i class="fab fa-youtube"></i>
+                        Youtube</a>
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="https://wa.me/+2349016561308" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="tel:+2349016561308"><i class="fas fa-phone"></i> Mobile</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand footer-div">
-                <img src="/src/images/logo-trans.png" alt="PasCodes Logo" class="footer-logo">
-                <p class="footer-company-name">PasCodes</p>
-            </div>
-            <div class="footer-links footer-div">
-                <h3>PAGES</h3>
-                <a href="/">Home</a>
-                <a href="/html/services.html">Services</a>
-                <a href="/html/blog.html">Blog</a>
-                <a href="/html/courses.html">Courses</a>
-                <a href="/html/contact.html">Contact</a>
-            </div>
-            <div class="footer-links footer-div">
-                <h3>NAVIGATIONS</h3>
-                <a href="/#collaboration">Collaboration</a>
-                <a href="/#partnership">Partnership</a>
-                <a href="/#services">Get a Website</a>
-                <a href="/#skills">My Skillset</a>
-                <a href="/#testimonials">What others think</a>
-            </div>
-            <div class="footer-contact-links footer-div">
-                <h3>CONTACTS</h3>
-                <a href="https://www.github.com/qal-technologies" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:pascodes.dev@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/in/paschal-ngaoka"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.youtube.com/@pasCodes" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
-                <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="https://wa.me/+2349016561308" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                <a href="tel:+2349016561308"><i class="fas fa-phone"></i> Mobile</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year">2025</span> PasCodes. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 
 </html>
 
 <script src="/js/general.js"></script>
-<script type="module" src="/js/courses.js"></script>
+<!-- <script type="module" src="/js/courses.js"></script> -->
 <script>
     const year = document.querySelector("footer span#year");
     const date = new Date().getFullYear();

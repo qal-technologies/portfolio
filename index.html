@@ -39,64 +39,6 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="preload" href="./src/fonts/" as="font" type="font/ttf" crossorigin>
 
-<style>
-     
-        .about-text h1 {
-            color: rgba(24,24,24);
-            margin-bottom: 6px;
-        }
-        
-        .about-text h2 {
-            color: var(--primary);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 6px;
-            margin-top: 30px;
-font-size:20px;
-        }
-        
-        .about-text .intro {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-        
-        .about-text .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .about-me-div .skills-column {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .skill-category {
-            background-color: rgba(0, 30,30,0.2);
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-        
-        .skill-category h3 {
-            margin-top: 0;
-            color: var(--primary);
-font-size:20px; 
-        }
-        
-        .skill-list {
-            padding-left: 20px;
-        }
-        
-        .skill-list li {
-            margin-bottom: 8px;
-color: #efefef;
-list-style:circle;
-        }
-        
-</style>
-
-
     <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/home.css">
@@ -106,8 +48,8 @@ list-style:circle;
 </head>
 
 <body>
-<div class="alert-message">
-</div>
+    <div class="alert-message">
+    </div>
 
     <div class="upper-wrapper">
         <div class="header dropdown">
@@ -117,29 +59,48 @@ list-style:circle;
                     <p class="name">pascodes_</p>
                 </div>
             </div>
-        
-            <div class="menu-tab rightIntro">=</div>
-            <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button>
+
+            <div class="sides">
+                <div class="menu-tab rightIntro">=</div>
+
+                <button class="theme-switch-btn mobile-switch" aria-label="Theme switch"><i
+                        class="fas fa-moon"></i></button>
+
+                <button aria-label="User profile" class="user-profile" id="user-profile"><i class="fas fa-user"></i></button>
+
+            </div>
+
+
             <nav class="links moveUp">
                 <ul>
-                    <li><a href="/" class="home active">HOME</a></li>
-                    <li><a href="/html/services.html"  class="services">SERVICES</a></li>
+                    <li><a class="home active">HOME</a></li>
+                    <li><a href="/html/services.html" class="services">SERVICES</a></li>
                     <li><a href="/html/blog.html" class="blog">BLOG</a></li>
                     <li><a href="/html/courses.html" class="courses">COURSES</a></li>
                     <li><a href="/html/contact.html" class="contact">CONTACT</a></li>
                     <li id="auth-links-container"></li>
-                    <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i class="fas fa-moon"></i></button></li>
+                    <!-- <li><button class="theme-switch-btn desktop-switch" aria-label="Theme switch"><i
+                                class="fas fa-moon"></i></button></li> -->
                 </ul>
             </nav>
-                    </div>
+        </div>
+
+        <div class="user-option-overlay">
+            <div class="rightIntro user-options">
+                <a href="/html/user.html" class="user-page">Profile</a>
+
+                <a href="/html/signup.html" class="sign-action">Login</a>
+            </div>
+        </div>
+
         <div class="cart-overlay">
             <a class="cart-div" href="/html/cart.html">
                 <i class="far fa-shopping-bag"></i>
                 <span class="cart-count">0</span>
             </a>
         </div>
-        </div>
-        
+    </div>
+
     <div id="body">
         <header>
             <div class="header-circle zoom-in"></div>
@@ -158,7 +119,7 @@ list-style:circle;
 
                 <div class="text-upper moveUp">
                     <div class="header-image">
-                        <img src="/src/images/logo-trans.png" alt="">
+                        <img src="/src/images/logo-trans.png" alt="company logo">
                     </div>
                     <div class="header-developer-info">
                         <p class="developer-name">Paschal Ngaoka</p>
@@ -169,14 +130,19 @@ list-style:circle;
         </header>
 
         <section class="about container hide-for-animation">
-            <img src="/src/images/name-with-logo.png" alt="PasQal Ng image">
+            <img src="/src/images/name-with-logo.png" alt="PasQal Ng image" class="hue-image">
 
             <div class="about-me-div">
                 <h1>About Me</h1>
-                <div class="about-text">     <p class="intro">
-            Hello! I'm <span class="highlight">Paschal Ngaoka</span>, a passionate and results-driven <strong>Full Stack Developer</strong> specializing in the <strong>MERN stack</strong> (MongoDB, Express.js, React, and Node.js). With over <strong>5 years of hands-on experience</strong>, I thrive in building scalable, high-performance web and mobile applications that deliver seamless user experiences.
-        </p>
-        <!--
+                <div class="about-text">
+                    <p class="intro">
+                        Hello! I'm <span class="highlight">Paschal Ngaoka</span>, a passionate and results-driven
+                        <strong>Full Stack Developer</strong> specializing in the <strong>MERN stack</strong> (MongoDB,
+                        Express.js, React, and Node.js). With over <strong>5 years of hands-on experience</strong>, I
+                        thrive in building scalable, high-performance web and mobile applications that deliver seamless
+                        user experiences.
+                    </p>
+                    <!--
         <h2>Technical Expertise</h2>
         <p>I bring a robust skill set across both <strong>frontend and backend development</strong>, ensuring end-to-end solutions that are efficient, modern, and maintainable.</p>
         
@@ -223,12 +189,15 @@ list-style:circle;
         </ul>
         
 -->
-        <h2>Why Work With Me?</h2>
-        <p>I'm not just a developer—I'm a <strong>solution-oriented professional</strong> who takes ownership of projects, ensuring they meet both business goals and user needs. My passion for clean code, continuous learning, and collaborative teamwork makes me a valuable asset to any development initiative.</p>
+                    <h2>Why Work With Me?</h2>
+                    <p>I'm not just a developer—I'm a <strong>solution-oriented professional</strong> who takes
+                        ownership of projects, ensuring they meet both business goals and user needs. My passion for
+                        clean code, continuous learning, and collaborative teamwork makes me a valuable asset to any
+                        development initiative.</p>
 
-        <p>Let's build something amazing together! 🚀</p>
-        </div>
-                
+                    <p>Let's build something amazing together! 🚀</p>
+                </div>
+
                 <a href="/html/contact.html" class="contact-btn" title="See More About Me">More About Me</a>
 
 
@@ -241,39 +210,39 @@ list-style:circle;
                 <div class="skill-div">
                     <i class="devicon-react-original"></i>
                     <p class="skill-name">REACT</p>
-                    </div>
-                    
-                    <div class="skill-div">
+                </div>
+
+                <div class="skill-div">
                     <i class="devicon-react-original colored"></i>
-<p class="skill-name">REACT NATIVE</p>
-</div>
+                    <p class="skill-name">REACT NATIVE</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-html5-plain"></i>
-<p class="skill-name">HTML</p>
-</div>
+                    <p class="skill-name">HTML</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-javascript-plain"></i>
-<p class="skill-name">VANILLA JS</p>
-</div>
+                    <p class="skill-name">VANILLA JS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-css3-plain"></i>
-<p class="skill-name">CSS</p>
-</div>
+                    <p class="skill-name">CSS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-nodejs-plain"></i>
-<p class="skill-name">NODE.JS</p>
-</div>
+                    <p class="skill-name">NODE.JS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-express-original"></i>
-<p class="skill-name">EXPRESS.JS</p>
+                    <p class="skill-name">EXPRESS.JS</p>
                 </div>
             </div>
-            
+
             <a href="/html/services.html" class="many-more">and many more</a>
         </section>
 
@@ -366,10 +335,11 @@ list-style:circle;
             </div>
         </section>
 
-        <section id="course-cta" class="course-cta container hidden-for-animation">
-            <div class="cta-content">
+        <section id="course-cta" class="course-cta container">
+            <div class="cta-content hidden-for-animation">
                 <h2>Unlock Your Potential</h2>
-                <p>Join thousands of students and professionals who have transformed their careers with our courses. High-quality, practical, and affordable learning.</p>
+                <p>Join thousands of students and professionals who have transformed their careers with our courses.
+                    High-quality, practical, and affordable learning.</p>
                 <a href="/html/courses.html" class="cta-btn">Browse Courses</a>
             </div>
         </section>
@@ -384,36 +354,36 @@ list-style:circle;
                     <i class="devicon-react-original"></i>
                     <p class="skill-name">REACT</p>
                 </div>
-                
+
                 <div class="skill-div">
                     <i class="devicon-react-original colored"></i>
-<p class="skill-name">REACT NATIVE</p>
-</div>
+                    <p class="skill-name">REACT NATIVE</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-html5-plain"></i>
-<p class="skill-name">HTML</p>
-</div>
+                    <p class="skill-name">HTML</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-javascript-plain"></i>
-<p class="skill-name">VANILLA JS</p>
-</div>
+                    <p class="skill-name">VANILLA JS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-css3-plain"></i>
-<p class="skill-name">CSS</p>
-</div>
+                    <p class="skill-name">CSS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-nodejs-plain"></i>
-<p class="skill-name">NODE.JS</p>
-</div>
+                    <p class="skill-name">NODE.JS</p>
+                </div>
 
-<div class="skill-div">
+                <div class="skill-div">
                     <i class="devicon-express-original"></i>
-<p class="skill-name">EXPRESS.JS</p>
-</div>
+                    <p class="skill-name">EXPRESS.JS</p>
+                </div>
             </div>
             <button class="cta-btn scroll-to-contact" data-service="Collaboration">Let's Build Together</button>
         </section>
@@ -469,16 +439,19 @@ list-style:circle;
             <p class="hidden-for-animation">I'm available for freelance work, collaboration, and partnership
                 opportunities. Feel free to reach out to me through any of the following channels:</p>
             <div class="contact-links">
-                <a href="https://www.github.com/qal-technologies" id="contact-github" target="_blank"><i class="fab fa-github"></i>
+                <a href="https://www.github.com/qal-technologies" id="contact-github" target="_blank"><i
+                        class="fab fa-github"></i>
                     GitHub</a>
-                <a href="mailto: pascodes.dev@gmail.com?body=Hey, I got your email from your website" id="contact-email"><i
-                        class="fas fa-envelope"></i> Email</a>
-                <a href="https://www.linkedin.com/in/paschal-ngaoka id=" contact-linked-in"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.youtube.com/@pasCodes" id="contact-facebook" target="_blank"><i class="fab fa-youtube"></i>
+                <a href="mailto: pascodes.dev@gmail.com?body=Hey, I got your email from your website"
+                    id="contact-email"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/paschal-ngaoka id=" contact-linked-in"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.youtube.com/@pasCodes" id="contact-facebook" target="_blank"><i
+                        class="fab fa-youtube"></i>
                     Youtube</a>
                 <a href="#" id="contact-facebook" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-                <a href="https://wa.me/+2349016561308?text=Hey, I got your email from your website" id="contact-whatsapp"
-                    target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/+2349016561308?text=Hey, I got your email from your website"
+                    id="contact-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 <a href="tel:+2349016561308" id="contact-phone"><i class="fas fa-phone"></i> Mobile</a>
             </div>
         </section>
@@ -486,7 +459,7 @@ list-style:circle;
         <footer>
             <div class="footer-content">
                 <div class="footer-brand footer-div">
-                    <img src="/src/images/logo-trans.png" alt="PasCodes Logo" class="footer-logo">
+                    <img src="/src/images/logo-trans.png" alt="PasCodes Logo" class="footer-logo  hue-image">
                     <p class="footer-company-name">PasCodes</p>
                 </div>
                 <div class="footer-links footer-div">
@@ -496,6 +469,7 @@ list-style:circle;
                     <a href="/html/blog.html">Blog</a>
                     <a href="/html/courses.html">Courses</a>
                     <a href="/html/contact.html">Contact</a>
+                    <a href="/html/signup.html" class="signup-link">Signup</a>
                 </div>
                 <div class="footer-links footer-div">
                     <h3>NAVIGATIONS</h3>
@@ -507,10 +481,12 @@ list-style:circle;
                 </div>
                 <div class="footer-contact-links footer-div">
                     <h3>CONTACTS</h3>
-                    <a href="https://www.github.com/qal-technologies" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.github.com/qal-technologies" target="_blank"><i class="fab fa-github"></i>
+                        GitHub</a>
                     <a href="mailto:pascodes.dev@gmail.com"><i class="fas fa-envelope"></i> Email</a>
                     <a href="https://www.linkedin.com/in/paschal-ngaoka"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://www.youtube.com/@pasCodes" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+                    <a href="https://www.youtube.com/@pasCodes" target="_blank"><i class="fab fa-youtube"></i>
+                        Youtube</a>
                     <a href="#" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
                     <a href="https://wa.me/+2349016561308" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                     <a href="tel:+2349016561308"><i class="fas fa-phone"></i> Mobile</a>
